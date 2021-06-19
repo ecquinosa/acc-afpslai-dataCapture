@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <IDTypeID>4</IDTypeID>
+  <IDType>Civilian Employee</IDType>
+  <AFPSerialNo_CCAFPSerialNo_IDNo />
+  <Rank>ACCOUNTANT</Rank>
+  <AFPICNumber>00002</AFPICNumber>
+  <BranchOfService />
+  <UnitAssignment />
+  <FirstName>JASMINE</FirstName>
+  <MiddleName>TUPAS</MiddleName>
+  <LastName>OCAMPO</LastName>
+  <Suffix />
+  <Gender>FEMALE</Gender>
+  <DateOfBirth>01/01/2000</DateOfBirth>
+  <Religion />
+  <Company />
+  <Office>CRAME</Office>
+  <Relationship />
+  <OtherIdentifyingData_Remark />
+  <IssueDate>01/31/2017</IssueDate>
+  <ExpiryDate>01/31/2018</ExpiryDate>
+  <Weight>456</Weight>
+  <Height>521</Height>
+  <BloodType>A</BloodType>
+  <ColorOfEye>BLACK</ColorOfEye>
+  <ColorOfHair>BLACK</ColorOfHair>
+  <TIN>123456789</TIN>
+  <Philhealth />
+  <BReN />
+  <CRN>00352634521</CRN>
+  <Address />
+  <FullName_Contact>MILAGROS TUPAS</FullName_Contact>
+  <Relationship_Contact>MOTHER</Relationship_Contact>
+  <ContactNos_Contact>02-7896666</ContactNos_Contact>
+  <Address_Contact />
+  <Type_Contact />
+  <Rank_Contact />
+  <BranchOfService_Contact />
+  <AFSerialNo_Contact />
+  <AFPSerialNo_CCAFPSerialNo_IDNo_Ref />
+  <IsRecapture>False</IsRecapture>
+  <LeftPrimaryFingerCode>Left Index</LeftPrimaryFingerCode>
+  <LeftThumbFingerCode>Left Thumb</LeftThumbFingerCode>
+  <RightPrimaryFingerCode>Right Index</RightPrimaryFingerCode>
+  <RightThumbFingerCode>Right Thumb</RightThumbFingerCode>
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20170131_014449_0003</SessionReference>
+  <Timestamp>1/31/2017 1:47:35 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

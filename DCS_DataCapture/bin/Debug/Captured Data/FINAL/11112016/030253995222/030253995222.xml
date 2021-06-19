@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <Dealer>ALLCARD</Dealer>
+  <Company>HOLY SPIRIT SCHOOL</Company>
+  <Branch>QUEZON CITY</Branch>
+  <ReferenceID>L4J86QE</ReferenceID>
+  <PhilhealthNo>030253995222</PhilhealthNo>
+  <FirstName>SANTOS2</FirstName>
+  <MiddleName>SAYAT</MiddleName>
+  <LastName>GUSI3</LastName>
+  <Suffix />
+  <Gender>Male</Gender>
+  <CivilStatus>Married</CivilStatus>
+  <DateOfBirth>04/09/1971</DateOfBirth>
+  <IsDependent>False</IsDependent>
+  <TIN>178983476</TIN>
+  <Country_BirthAddress>PHILIPPINES</Country_BirthAddress>
+  <Province_BirthAddress>BATANGAS</Province_BirthAddress>
+  <City_BirthAddress>BATANGAS</City_BirthAddress>
+  <Height>177.8 CM</Height>
+  <Weight>68.04 KGS</Weight>
+  <DistinguishingMark />
+  <FirstName_Father>NA</FirstName_Father>
+  <MiddleName_Father>NA</MiddleName_Father>
+  <LastName_Father>NA</LastName_Father>
+  <Suffix_Father />
+  <FirstName_Mother>LYDIA</FirstName_Mother>
+  <MiddleName_Mother>ILAO</MiddleName_Mother>
+  <LastName_Mother>SAYAT</LastName_Mother>
+  <Suffix_Mother />
+  <RoomFloorUnitBldg>34</RoomFloorUnitBldg>
+  <HouseLotBlock>65</HouseLotBlock>
+  <Streetname>JACINTO ST.</Streetname>
+  <Subdivision>43</Subdivision>
+  <Barangay>BAGONG BAYAN</Barangay>
+  <Country_Address>PHILIPPINES</Country_Address>
+  <Province_Address>Rizal</Province_Address>
+  <City_Address>ANTIPOLO CITY</City_Address>
+  <Postal>1870</Postal>
+  <MobileNos>09470903908</MobileNos>
+  <TelephoneNos>23432</TelephoneNos>
+  <EmailAddress>32</EmailAddress>
+  <MemberTypeID>1</MemberTypeID>
+  <MemberType>FORMAL</MemberType>
+  <Recard>False</Recard>
+  <RecardReason />
+  <ForReview>False</ForReview>
+  <LeftPrimaryFingerCode />
+  <LeftThumbFingerCode />
+  <RightPrimaryFingerCode />
+  <RightThumbFingerCode />
+  <PhotoOverride>False</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20161111_114232_0002</SessionReference>
+  <Timestamp>11/11/2016 6:15:28 PM</Timestamp>
+  <OperatorID>jdelacruz</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

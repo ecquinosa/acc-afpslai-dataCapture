@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DCS_DataCapture.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MiddleServerUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://localhost:44348</Value>
+    </Setting>
+    <Setting Name="BranchIssue" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AGUINALDO</Value>
+    </Setting>
+    <Setting Name="ApiKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">eyJpdiI6IkgzRHhKd2VKVFpmUHZVSitKMVZlUHc9PSIsInZhbHVlIjoiTFMwcVZ0M0JLNVJrR1U0SEJEQWtCUT09IiwibWFjIjoiZTFjMGM0OGU3MmVmNzdkM2MyNmYwYjdjMGFhMTg0Njk4MjcyN2E5ZDM4ZjE0ZWUwZDFkZjUzNDU2ZDg3NDQxYyJ9</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

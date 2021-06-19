@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <IDNumber>123456002</IDNumber>
+  <FullName>ALJON TIJUANO</FullName>
+  <NickName>JON</NickName>
+  <Gender>MALE</Gender>
+  <CivilStatus>MARRIED</CivilStatus>
+  <DateOfBirth>11/19/1995</DateOfBirth>
+  <BloodType />
+  <SSS>331234568</SSS>
+  <TIN />
+  <PAGIBIG />
+  <Philhealth />
+  <ContactNos>09192596341</ContactNos>
+  <EmailAddress>juv1321@gmail.com</EmailAddress>
+  <Address>ANTIPOLO CITY</Address>
+  <Company>LINAS LECHON</Company>
+  <Department>ACCOUNTING</Department>
+  <Designation>Accountant</Designation>
+  <DateHired>07/16/2016</DateHired>
+  <FullName_Contact>GINA ARIOLA</FullName_Contact>
+  <Relationship_Contact>MOTHER</Relationship_Contact>
+  <ContactNos_Contact />
+  <Address_Contact>ANTIPOLO CITY</Address_Contact>
+  <ForReview>False</ForReview>
+  <ReCapture>False</ReCapture>
+  <LeftPrimaryFingerCode>Left Index</LeftPrimaryFingerCode>
+  <LeftThumbFingerCode>Left Thumb</LeftThumbFingerCode>
+  <RightPrimaryFingerCode>Right Index</RightPrimaryFingerCode>
+  <RightThumbFingerCode>Right Thumb</RightThumbFingerCode>
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20161028_045445_0002</SessionReference>
+  <Timestamp>10/28/2016 5:06:10 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

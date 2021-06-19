@@ -1,0 +1,186 @@
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture2.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture1.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.PreRegistered.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS2015\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS2015\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS2015\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture2.resources
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture1.resources
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.PreRegistered.resources
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS2015 - original\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS2015\DCS2015\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS2015\DCS2015\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS2015\DCS2015\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ParameterSetting.resources
+D:\EDEL\ACC\Projects\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ParameterSetting.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.PreRegistered.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Philhealth\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ContactPerson.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Bayambang (UMID ELEMENTS)\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\Demo\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\YGC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Setting.resources
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\AFPIC\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Setting.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.MaintenanceTable.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.VoidTxn.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageRecord.resources
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.pdb
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.xml
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\MySql.Data.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.pdb
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.xml
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.MaintenanceTable.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageRecord.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Setting.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.VoidTxn.resources
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.Cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\EDEL\ACC\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csprojResolveAssemblyReference.cache
+E:\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.MaintenanceTable.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageRecord.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Setting.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.VoidTxn.resources
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.cache
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CoreCompileInputs.cache
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.dll
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.xml
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CopyComplete
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\Newtonsoft.Json.dll
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\Newtonsoft.Json.xml
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\accAfpslaiEmvEncDec.dll
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\accAfpslaiEmvEncDec.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_MemberInfo.pdb
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.AssemblyReference.cache
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.exe.config
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.exe
+D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.exe

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <IDTypeID>1</IDTypeID>
+  <IDType>Officer</IDType>
+  <AFPSerialNo_CCAFPSerialNo_IDNo>123456789001</AFPSerialNo_CCAFPSerialNo_IDNo>
+  <Rank>MAJOR</Rank>
+  <AFPICNumber>00001</AFPICNumber>
+  <BranchOfService>CRAME</BranchOfService>
+  <UnitAssignment>MABINI</UnitAssignment>
+  <FirstName>JOHN</FirstName>
+  <MiddleName>ROQUE</MiddleName>
+  <LastName>SANTOS</LastName>
+  <Suffix />
+  <Gender>MALE</Gender>
+  <DateOfBirth>01/01/2000</DateOfBirth>
+  <Religion />
+  <Company />
+  <Office />
+  <Relationship />
+  <OtherIdentifyingData_Remark />
+  <IssueDate>01/31/2017</IssueDate>
+  <ExpiryDate>01/31/2018</ExpiryDate>
+  <Weight>52</Weight>
+  <Height>52</Height>
+  <BloodType>A</BloodType>
+  <ColorOfEye>BLACK</ColorOfEye>
+  <ColorOfHair>BLACK</ColorOfHair>
+  <TIN>123456789</TIN>
+  <Philhealth />
+  <BReN />
+  <CRN />
+  <Address />
+  <FullName_Contact>JOANNE SANTOS</FullName_Contact>
+  <Relationship_Contact>SPOUSE</Relationship_Contact>
+  <ContactNos_Contact>02-8889654</ContactNos_Contact>
+  <Address_Contact />
+  <Type_Contact />
+  <Rank_Contact />
+  <BranchOfService_Contact />
+  <AFSerialNo_Contact />
+  <AFPSerialNo_CCAFPSerialNo_IDNo_Ref />
+  <IsRecapture>False</IsRecapture>
+  <LeftPrimaryFingerCode>Left Index</LeftPrimaryFingerCode>
+  <LeftThumbFingerCode>Left Thumb</LeftThumbFingerCode>
+  <RightPrimaryFingerCode>Right Index</RightPrimaryFingerCode>
+  <RightThumbFingerCode>Right Thumb</RightThumbFingerCode>
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20170131_014019_0002</SessionReference>
+  <Timestamp>1/31/2017 1:44:48 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

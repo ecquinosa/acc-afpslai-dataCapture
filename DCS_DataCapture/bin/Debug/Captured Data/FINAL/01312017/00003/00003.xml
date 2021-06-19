@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <IDTypeID>15</IDTypeID>
+  <IDType>Legal Beneficiary</IDType>
+  <AFPSerialNo_CCAFPSerialNo_IDNo>951753456</AFPSerialNo_CCAFPSerialNo_IDNo>
+  <Rank />
+  <AFPICNumber>00003</AFPICNumber>
+  <BranchOfService>TARLAC</BranchOfService>
+  <UnitAssignment />
+  <FirstName>SANTINO</FirstName>
+  <MiddleName>ALVAREZ</MiddleName>
+  <LastName>QUINTO</LastName>
+  <Suffix />
+  <Gender>MALE</Gender>
+  <DateOfBirth>01/01/2000</DateOfBirth>
+  <Religion>CATHOLIC</Religion>
+  <Company />
+  <Office />
+  <Relationship>FATHER</Relationship>
+  <OtherIdentifyingData_Remark>CHEEK MOLE</OtherIdentifyingData_Remark>
+  <IssueDate>01/31/2017</IssueDate>
+  <ExpiryDate>01/31/2018</ExpiryDate>
+  <Weight>65</Weight>
+  <Height>65</Height>
+  <BloodType>B</BloodType>
+  <ColorOfEye>BLACK</ColorOfEye>
+  <ColorOfHair>BLACK</ColorOfHair>
+  <TIN>123456123</TIN>
+  <Philhealth>851456789</Philhealth>
+  <BReN />
+  <CRN>0034567897</CRN>
+  <Address>UNIT 11 BLOCK 5 SUAREZ STREET PASAY CITY</Address>
+  <FullName_Contact>PEDRO T. QUINTO</FullName_Contact>
+  <Relationship_Contact>FATHER</Relationship_Contact>
+  <ContactNos_Contact>09157779514</ContactNos_Contact>
+  <Address_Contact>UNIT 3 BLOCK 5 SUAREZ STREET PASAY CITY</Address_Contact>
+  <Type_Contact>VETERAN</Type_Contact>
+  <Rank_Contact>MAJOR</Rank_Contact>
+  <BranchOfService_Contact>MINDANAO</BranchOfService_Contact>
+  <AFSerialNo_Contact>123456789001</AFSerialNo_Contact>
+  <AFPSerialNo_CCAFPSerialNo_IDNo_Ref>00001</AFPSerialNo_CCAFPSerialNo_IDNo_Ref>
+  <IsRecapture>False</IsRecapture>
+  <LeftPrimaryFingerCode>Left Index</LeftPrimaryFingerCode>
+  <LeftThumbFingerCode>Left Thumb</LeftThumbFingerCode>
+  <RightPrimaryFingerCode>Right Index</RightPrimaryFingerCode>
+  <RightThumbFingerCode>Right Thumb</RightThumbFingerCode>
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20170131_022757_0004</SessionReference>
+  <Timestamp>1/31/2017 2:47:57 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

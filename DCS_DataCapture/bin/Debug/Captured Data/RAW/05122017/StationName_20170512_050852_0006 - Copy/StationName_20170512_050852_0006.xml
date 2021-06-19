@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <PrintingType>New</PrintingType>
+  <ReplaceReason />
+  <CIF_ID>1112222222222</CIF_ID>
+  <FirstName>PAN</FirstName>
+  <MiddleName>DE JESUS</MiddleName>
+  <LastName>LARTIMAR</LastName>
+  <Suffix />
+  <Gender>FEMALE</Gender>
+  <DateOfBirth>30/06/1979</DateOfBirth>
+  <MaritalStatus>Single</MaritalStatus>
+  <MembershipDate>22/12/1999</MembershipDate>
+  <MembershipStatus>ACTIVE2</MembershipStatus>
+  <MembershipType>Regular</MembershipType>
+  <MobileNos />
+  <ContactNos />
+  <IDNumber />
+  <BranchIssue>AGUINALDO</BranchIssue>
+  <Address1>MAKALINTAL STREET BRGY SITIO</Address1>
+  <Address2 />
+  <Address3 />
+  <City>MANDALUYONG</City>
+  <Province>NCR</Province>
+  <Country>Philippines</Country>
+  <ZipCode>1600</ZipCode>
+  <FullName_Contact>JUSTO LAPIDA</FullName_Contact>
+  <ContactNos_Contact>88812345</ContactNos_Contact>
+  <AssociateType />
+  <CIF_ID_PrincipalMember />
+  <PrincipalName />
+  <IDs>1,0,5,3,1,610,0</IDs>
+  <Supervisor />
+  <VoidReason />
+  <RefDataID />
+  <LeftPrimaryFingerCode>Left Index</LeftPrimaryFingerCode>
+  <LeftThumbFingerCode>Left Thumb</LeftThumbFingerCode>
+  <RightPrimaryFingerCode>Right Index</RightPrimaryFingerCode>
+  <RightThumbFingerCode>Right Thumb</RightThumbFingerCode>
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20170512_050852_0006</SessionReference>
+  <Timestamp>5/12/2017 5:11:00 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

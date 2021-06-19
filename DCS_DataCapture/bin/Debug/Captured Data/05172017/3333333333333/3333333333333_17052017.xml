@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <PrintingType>New</PrintingType>
+  <ReplaceReason />
+  <CIF_ID>3333333333333</CIF_ID>
+  <FirstName>AFDSFA</FirstName>
+  <MiddleName />
+  <LastName>FDA</LastName>
+  <Suffix />
+  <Gender>MALE</Gender>
+  <DateOfBirth>17/05/1980</DateOfBirth>
+  <MaritalStatus>Married</MaritalStatus>
+  <MembershipDate>17/05/2017</MembershipDate>
+  <MembershipStatus>ACTIVE</MembershipStatus>
+  <MembershipType>Regular</MembershipType>
+  <MobileNos>13213213213</MobileNos>
+  <ContactNos>342432</ContactNos>
+  <IDNumber />
+  <BranchIssue>AGUINALDO</BranchIssue>
+  <Address1 />
+  <Address2 />
+  <Address3 />
+  <City />
+  <Province />
+  <Country>Philippines</Country>
+  <ZipCode />
+  <FullName_Contact>RW</FullName_Contact>
+  <ContactNos_Contact>324</ContactNos_Contact>
+  <AssociateType />
+  <CIF_ID_PrincipalMember />
+  <PrincipalName />
+  <IDs>1,0,1,3,1,610,0</IDs>
+  <Supervisor />
+  <VoidReason />
+  <RefDataID />
+  <LeftPrimaryFingerCode />
+  <LeftThumbFingerCode />
+  <RightPrimaryFingerCode />
+  <RightThumbFingerCode />
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>001_20170516_044730_0001</SessionReference>
+  <Timestamp>5/17/2017 11:42:09 PM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

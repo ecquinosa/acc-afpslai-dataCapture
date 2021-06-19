@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MemberData>
+  <Dealer>ALLCARD</Dealer>
+  <Company>ANGELICUM COLLEGE</Company>
+  <Branch>QUEZON CITY</Branch>
+  <ReferenceID>GB8KY11</ReferenceID>
+  <PhilhealthNo>030511011312</PhilhealthNo>
+  <FirstName>SANTOS</FirstName>
+  <MiddleName>MANZON</MiddleName>
+  <LastName>MARY ANN</LastName>
+  <Suffix />
+  <Gender>Female</Gender>
+  <CivilStatus>Married</CivilStatus>
+  <DateOfBirth>07/28/1981</DateOfBirth>
+  <IsDependent>False</IsDependent>
+  <TIN>300517257</TIN>
+  <Country_BirthAddress>PHILIPPINES</Country_BirthAddress>
+  <Province_BirthAddress>MANILA</Province_BirthAddress>
+  <City_BirthAddress>Quezon City</City_BirthAddress>
+  <Height>152.4 CM</Height>
+  <Weight>47.63 KGS</Weight>
+  <DistinguishingMark />
+  <FirstName_Father>JUANITO</FirstName_Father>
+  <MiddleName_Father>PADLAN</MiddleName_Father>
+  <LastName_Father>MANZON</LastName_Father>
+  <Suffix_Father />
+  <FirstName_Mother>ALEJANDRA</FirstName_Mother>
+  <MiddleName_Mother>MERCADO</MiddleName_Mother>
+  <LastName_Mother>MENDOZA</LastName_Mother>
+  <Suffix_Mother />
+  <RoomFloorUnitBldg>EWQ</RoomFloorUnitBldg>
+  <HouseLotBlock>B63 L5</HouseLotBlock>
+  <Streetname>EMERALD</Streetname>
+  <Subdivision>HERITAGE HOMES PH 3</Subdivision>
+  <Barangay>LOMA DE GATO</Barangay>
+  <Country_Address>PHILIPPINES</Country_Address>
+  <Province_Address>BULACAN</Province_Address>
+  <City_Address>MARILAO</City_Address>
+  <Postal>3019</Postal>
+  <MobileNos>09179952929</MobileNos>
+  <TelephoneNos>QWE</TelephoneNos>
+  <EmailAddress>ANNMSANTOS29@GMAIL.COM</EmailAddress>
+  <MemberTypeID>1</MemberTypeID>
+  <MemberType>FORMAL</MemberType>
+  <Recard>False</Recard>
+  <RecardReason />
+  <ForReview>False</ForReview>
+  <LeftPrimaryFingerCode />
+  <LeftThumbFingerCode />
+  <RightPrimaryFingerCode />
+  <RightThumbFingerCode />
+  <PhotoOverride>True</PhotoOverride>
+  <SignatureOverride>False</SignatureOverride>
+  <PhotoICAO>True</PhotoICAO>
+  <PhotoScore>0</PhotoScore>
+  <SessionReference>StationName_20161103_050042_0006</SessionReference>
+  <Timestamp>11/11/2016 11:42:31 AM</Timestamp>
+  <OperatorID>admin</OperatorID>
+  <TerminalName>StationName</TerminalName>
+</MemberData>

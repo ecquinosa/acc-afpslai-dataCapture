@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A24E2EA8-2747-4147-90FF-272B5BC58237}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DCS_DataCapture</RootNamespace>
     <AssemblyName>DCS_DataCapture</AssemblyName>
@@ -114,12 +114,6 @@
     <Compile Include="DataCapture.Designer.cs">
       <DependentUpon>DataCapture.cs</DependentUpon>
     </Compile>
-    <Compile Include="DCSUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DCSUsers.Designer.cs">
-      <DependentUpon>DCSUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExcelExceptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataCapture.resx">
       <DependentUpon>DataCapture.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DCSUsers.resx">
-      <DependentUpon>DCSUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcelExceptions.resx">
       <DependentUpon>ExcelExceptions.cs</DependentUpon>

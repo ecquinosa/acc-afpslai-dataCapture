@@ -188,13 +188,13 @@ namespace DCS_DataCapture
             Class.requestCredential cred = new Class.requestCredential();
             cred.dateRequest = DateTime.Now.ToString();
             cred.key = Properties.Settings.Default.ApiKey;
-            cred.userId = 0;
-            cred.userName = "admin";
-            cred.userPass = "eyJpdiI6InNad2RnWndKdjUvUlRkVnZFelB1UGc9PSIsInZhbHVlIjoiQ1NwWVdMbnZMcmdRSmxEUlUrczV6dz09IiwibWFjIjoiYjNhNjI1YmNjMzQ4NWRlMDdlYzhjZDRkYWE4M2M1MDRhNTdhYmI5ZTdiYjcwOGE4M2I0NjRkYjMyZGY4Njc0OCJ9";
+            //cred.userId = 0;
+            //cred.userName = "admin";
+            //cred.userPass = "eyJpdiI6InNad2RnWndKdjUvUlRkVnZFelB1UGc9PSIsInZhbHVlIjoiQ1NwWVdMbnZMcmdRSmxEUlUrczV6dz09IiwibWFjIjoiYjNhNjI1YmNjMzQ4NWRlMDdlYzhjZDRkYWE4M2M1MDRhNTdhYmI5ZTdiYjcwOGE4M2I0NjRkYjMyZGY4Njc0OCJ9";
 
-            //cred.userId = DataCapture.dcsUser.userId;
-            //cred.userName = DataCapture.dcsUser.userName;
-            //cred.userPass = DataCapture.dcsUser.userPass;
+            cred.userId = DataCapture.dcsUser.userId;
+            cred.userName = DataCapture.dcsUser.userName;
+            cred.userPass = DataCapture.dcsUser.userPass;
             cred.branch = Properties.Settings.Default.BranchIssue;
 
             return cred;

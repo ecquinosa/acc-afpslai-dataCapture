@@ -387,7 +387,7 @@ namespace DCS_DataCapture
                 DCS_MemberInfo.Data.AddMemberInfoRow("Suffix", "", "Suffix:", "txtSuffix", "TextBox", true, false,false, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Gender", "", "Gender:", "cboGender", "ComboBox", true, true, false, true, false);                
                 DCS_MemberInfo.Data.AddMemberInfoRow("DateOfBirth", "", "Date of Birth:", "mtbDateOfBirth", "DateTimePicker", true, true, false, true, false);
-                DCS_MemberInfo.Data.AddMemberInfoRow("MaritalStatus", "", "Marital Status:", "cboMaritalStatus", "ComboBox", true, false, false, false, false);
+                DCS_MemberInfo.Data.AddMemberInfoRow("MaritalStatus", "", "Marital Status:", "cboMaritalStatus", "ComboBox", true, true, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipDate", "", "Membership Date:", "mtbMembershipDate", "DateTimePicker", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipStatus", "", "Membership Status:", "cboMembershipStatus", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipType", "", "Membership Type:", "cboMembershipType", "ComboBox", true, false, false, false, false);
@@ -781,7 +781,7 @@ namespace DCS_DataCapture
         {
             InitMemberInfoTable();            
             PopulateCustomControls();
-            MiddleServerApi.ValidateLogIn("admin", "afPsL@ieMv2021");
+            //MiddleServerApi.ValidateLogIn("admin", "afPsL@ieMv2021");
             PopulateComboBox(MiddleServerApi.msApi.getAssociateType, ref cboAssociateType);
             PopulateComboBox(MiddleServerApi.msApi.getCivilStatus, ref cboMaritalStatus);
             PopulateComboBox(MiddleServerApi.msApi.getMembershipStatus, ref cboMembershipStatus);

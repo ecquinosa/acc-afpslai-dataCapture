@@ -498,9 +498,9 @@
             // 
             this.label25.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.DimGray;
-            this.label25.Location = new System.Drawing.Point(10, 45);
+            this.label25.Location = new System.Drawing.Point(6, 44);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(160, 18);
+            this.label25.Size = new System.Drawing.Size(164, 19);
             this.label25.TabIndex = 183;
             this.label25.Text = "Principal Member CIF:";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1026,7 +1026,6 @@
             this.txtCIF.Size = new System.Drawing.Size(152, 25);
             this.txtCIF.TabIndex = 3;
             this.txtCIF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCIF_KeyPress);
-            this.txtCIF.Leave += new System.EventHandler(this.txtCIF_Leave);
             // 
             // txtFName
             // 

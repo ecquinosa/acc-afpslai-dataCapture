@@ -54,7 +54,9 @@ namespace DCS_DataCapture
             saveMemberImages,
             cancelCapture,
             addDCSSystemSettings,
-            checkMemberIfCaptured
+            checkMemberIfCaptured,
+            pullCBSData
+
         }
 
         public static bool ExecuteApiRequest(string url, string soapStr, ref string soapResponse, ref string err)

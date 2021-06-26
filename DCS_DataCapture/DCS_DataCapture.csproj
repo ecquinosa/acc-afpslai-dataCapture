@@ -93,6 +93,7 @@
     <Compile Include="Class\branch.cs" />
     <Compile Include="Class\cancelCapture.cs" />
     <Compile Include="Class\dcs_system_setting.cs" />
+    <Compile Include="Class\cbsData.cs" />
     <Compile Include="Class\memberImages.cs" />
     <Compile Include="Class\online_registration.cs" />
     <Compile Include="Class\requestCredential.cs" />
@@ -113,6 +114,12 @@
     </Compile>
     <Compile Include="DataCapture.Designer.cs">
       <DependentUpon>DataCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DCSUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCSUsers.Designer.cs">
+      <DependentUpon>DCSUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="ExcelExceptions.cs">
       <SubType>Form</SubType>
@@ -139,7 +146,7 @@
       <DependentUpon>ManageRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\member.cs" />
-    <Compile Include="MiddleServerApi.cs" />
+    <Compile Include="Class\MiddleServerApi.cs" />
     <Compile Include="Preview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataCapture.resx">
       <DependentUpon>DataCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCSUsers.resx">
+      <DependentUpon>DCSUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcelExceptions.resx">
       <DependentUpon>ExcelExceptions.cs</DependentUpon>

@@ -184,6 +184,8 @@ D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_D
 D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.exe.config
 D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\bin\Debug\DCS_DataCapture.exe
 D:\WORK\Projects\DCS_DataCapture\AFPSLAI\DCS2015\DCS_DataCapture\obj\Debug\DCS_DataCapture.exe
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvEncDec.pdb
@@ -194,6 +196,7 @@ D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Deb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.AssemblyReference.cache
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.DCSUsers.resources
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.MaintenanceTable.resources
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
@@ -206,7 +209,5 @@ D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Deb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.cache
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CoreCompileInputs.cache
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CopyComplete
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb

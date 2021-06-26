@@ -387,7 +387,7 @@ namespace DCS_DataCapture
                 DCS_MemberInfo.Data.AddMemberInfoRow("Suffix", "", "Suffix:", "txtSuffix", "TextBox", true, false,false, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Gender", "", "Gender:", "cboGender", "ComboBox", true, true, false, true, false);                
                 DCS_MemberInfo.Data.AddMemberInfoRow("DateOfBirth", "", "Date of Birth:", "mtbDateOfBirth", "DateTimePicker", true, true, false, true, false);
-                DCS_MemberInfo.Data.AddMemberInfoRow("MaritalStatus", "", "Marital Status:", "cboMaritalStatus", "ComboBox", true, true, false, false, false);
+                DCS_MemberInfo.Data.AddMemberInfoRow("MaritalStatus", "", "Marital Status:", "cboMaritalStatus", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipDate", "", "Membership Date:", "mtbMembershipDate", "DateTimePicker", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipStatus", "", "Membership Status:", "cboMembershipStatus", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipType", "", "Membership Type:", "cboMembershipType", "ComboBox", true, false, false, false, false);
@@ -995,6 +995,50 @@ namespace DCS_DataCapture
             }
         }
 
+        private void GetCBSData()
+        {
+            object obj = null;
+            if (MiddleServerApi.GetTable(MiddleServerApi.msApi.pullCBSData, ref obj, "{ 'cif': '" + txtCIF.Text + "' }"))
+            {
+                var cbsData = Newtonsoft.Json.JsonConvert.DeserializeObject<Class.cbsData>(obj.ToString());
+
+                if (cbsData.cif != null)
+                {                                   
+                    txtCIF.Text = cbsData.cif;
+                    txtFName.Text = cbsData.first_name;
+                    txtMName.Text = cbsData.middle_name;
+                    txtLName.Text = cbsData.last_name;
+                    txtSuffix.Text = cbsData.suffix;                    
+                    mtbDateOfBirth.Value = Convert.ToDateTime(cbsData.date_birth);
+                    mtbMembershipDate.Value = Convert.ToDateTime(cbsData.membership_date);
+                    txtMobileNos.Text = cbsData.mobile_nos;
+                    txtContactNos.Text = cbsData.contact_nos;
+                    txtAddress1.Text = cbsData.address1;
+                    txtAddress2.Text = cbsData.address2;
+                    txtAddress3.Text = cbsData.address3;
+                    txtCity.Text = cbsData.city;
+                    txtProvince.Text = cbsData.province;
+                    txtZipCode.Text = cbsData.zipCode;
+                    txtFullName_Contact.Text = cbsData.emergency_contact_name;
+                    txtContactNos_Contact.Text = cbsData.emergency_contact_nos;                   
+                    txtPrincipalName.Text = cbsData.principal_name;
+                    txtCIF_PrincipalMember.Text = cbsData.principal_cif;
+                    txtCCANo.Text = cbsData.cca_no;
+
+                    if (!string.IsNullOrEmpty(cbsData.gender)) if (cbsData.gender.Substring(0, 1) == "M") cboGender.SelectedIndex = 1; else cboGender.SelectedIndex = 2;
+                    if (!string.IsNullOrEmpty(cbsData.civilStatus)) cboMaritalStatus.SelectedIndex = cboMaritalStatus.FindStringExact(cbsData.civilStatus);
+                    if (!string.IsNullOrEmpty(cbsData.membershipStatus)) cboMembershipStatus.SelectedIndex = cboMembershipStatus.FindStringExact(cbsData.membershipStatus);
+                    if (!string.IsNullOrEmpty(cbsData.membershipType)) cboMembershipType.SelectedIndex = cboMembershipType.FindStringExact(cbsData.membershipType);
+                    if (!string.IsNullOrEmpty(cbsData.associateType)) cboAssociateType.SelectedIndex = cboAssociateType.FindStringExact(cbsData.associateType);
+                }
+                else
+                {
+                    Class.Utilities.ShowWarningMessage("CIF not found.");
+                    ResetForm();
+                }
+            }
+        }
+
         private void PopulateCboCountry(string tableName, string fieldID, string fieldDesc, ref ComboBox cbo)
         {
             //DAL_Mssql DAL = new DAL_Mssql();
@@ -1497,6 +1541,7 @@ namespace DCS_DataCapture
             cboAssociateType.SelectedIndex = 0;            
             txtCIF_PrincipalMember.Clear();
             txtPrincipalName.Clear();
+            txtCCANo.Clear();
 
             email = "";
         }
@@ -1684,9 +1729,6 @@ namespace DCS_DataCapture
        
         private void btnReset_Click(object sender, EventArgs e)
         {            
-
-
-
             //DCS_MemberInfo.Data.ResetMemberInfo();
             foreach (Control ctrl in groupBox1.Controls)
             {
@@ -1808,7 +1850,14 @@ namespace DCS_DataCapture
 
         private void lbSearchCIF_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BuildCardName();
+            if (txtCIF.Text == "")
+            {
+                Class.Utilities.ShowWarningMessage("Please enter CIF to search.");
+                txtCIF.Focus();
+                return;
+            }
+
+            GetCBSData();
         }
 
         private void lbSearchRF_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

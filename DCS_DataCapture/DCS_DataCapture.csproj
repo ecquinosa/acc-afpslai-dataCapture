@@ -57,6 +57,9 @@
     <Reference Include="accAfpslaiEmvEncDec">
       <HintPath>..\..\..\..\accAfpslaiEmvSrvc\accAfpslaiEmvEncDec\bin\Debug\accAfpslaiEmvEncDec.dll</HintPath>
     </Reference>
+    <Reference Include="accAfpslaiEmvObjct">
+      <HintPath>..\..\..\accAfpslaiEmvObjct\bin\Debug\accAfpslaiEmvObjct.dll</HintPath>
+    </Reference>
     <Reference Include="AllcardEncryptDecrypt">
       <HintPath>..\..\..\..\PhilhealthDataCapturing_BackOffice - SECURA\PhilhealthDataCapturing_BackOffice\bin\AllcardEncryptDecrypt.dll</HintPath>
     </Reference>
@@ -88,26 +91,6 @@
     <Compile Include="AddNewField.Designer.cs">
       <DependentUpon>AddNewField.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\address.cs" />
-    <Compile Include="Class\associate_type.cs" />
-    <Compile Include="Class\branch.cs" />
-    <Compile Include="Class\cancelCapture.cs" />
-    <Compile Include="Class\dcs_system_setting.cs" />
-    <Compile Include="Class\cbsData.cs" />
-    <Compile Include="Class\memberImages.cs" />
-    <Compile Include="Class\online_registration.cs" />
-    <Compile Include="Class\requestCredential.cs" />
-    <Compile Include="Class\requestPayload.cs" />
-    <Compile Include="Class\card.cs" />
-    <Compile Include="Class\civil_status.cs" />
-    <Compile Include="Class\country.cs" />
-    <Compile Include="Class\loginRequest.cs" />
-    <Compile Include="Class\membership_status.cs" />
-    <Compile Include="Class\membership_type.cs" />
-    <Compile Include="Class\print_type.cs" />
-    <Compile Include="Class\recard_reason.cs" />
-    <Compile Include="Class\system_role.cs" />
-    <Compile Include="Class\user.cs" />
     <Compile Include="Class\Utilities.cs" />
     <Compile Include="DataCapture.cs">
       <SubType>UserControl</SubType>
@@ -145,8 +128,6 @@
     <Compile Include="ManageRecord.Designer.cs">
       <DependentUpon>ManageRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\member.cs" />
-    <Compile Include="Class\MiddleServerApi.cs" />
     <Compile Include="Preview.cs">
       <SubType>UserControl</SubType>
     </Compile>

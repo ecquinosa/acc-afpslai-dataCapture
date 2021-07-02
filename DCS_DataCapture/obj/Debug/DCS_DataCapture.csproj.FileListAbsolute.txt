@@ -211,3 +211,5 @@ D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Deb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CopyComplete
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.dll
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.pdb

@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Windows.Forms;
+using accAfpslaiEmvObjct;
 
 namespace DCS_DataCapture
 {
@@ -32,12 +33,12 @@ namespace DCS_DataCapture
 
         private void SaveSetting()
         {           
-            Class.dcs_system_setting dss = new Class.dcs_system_setting();
+            dcs_system_setting dss = new dcs_system_setting();
             dss.cif_length = Convert.ToInt16(txtCIF.Text);
             dss.member_type_assoc_allow_yrs = Convert.ToInt16(txtMemTypeAssocAllwdYrs.Text);
             dss.member_type_reg_allow_yrs = Convert.ToInt16(txtMemTypeRegularAllwdYrs.Text);
             dss.cardname_length = Convert.ToInt16(txtCardName_Length.Text);
-            var response = MiddleServerApi.addDCSSystemSettings(dss);
+            var response = DataCapture.msa.addDCSSystemSettings(dss);
             if (!response) Class.Utilities.ShowWarningMessage("Failed to save CIF, Member Type Associate, Member Type Regular and Cardname data.");
             else DCS_DataCapture.DataCapture.dcs_system_setting = dss;
 
@@ -90,7 +91,7 @@ namespace DCS_DataCapture
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            if (MiddleServerApi.checkServerDBStatus()) Class.Utilities.ShowInformationMessage("Connection success."); else Class.Utilities.ShowWarningMessage("Connection failed.");
+            if (DataCapture.msa.checkServerDBStatus(txtServer.Text)) Class.Utilities.ShowInformationMessage("Connection success."); else Class.Utilities.ShowWarningMessage("Connection failed.");
         }      
 
         private void txtCIF_KeyPress(object sender, KeyPressEventArgs e)

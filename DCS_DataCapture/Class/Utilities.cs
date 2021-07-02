@@ -24,9 +24,7 @@ namespace DCS_DataCapture.Class
         public static void ShowErrorMessage(string msg)
         {
             System.Windows.Forms.MessageBox.Show(msg, MSG_HEADER, System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-        }
-
-
+        }      
 
     }
 }

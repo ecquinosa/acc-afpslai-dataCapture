@@ -15,8 +15,8 @@ namespace DCS_DataCapture
         public ManageRecord()
         {
             InitializeComponent();
-            txtCIF.MaxLength = DataCapture.dcs_system_setting.cif_length;
-            txtCIF_PrincipalMember.MaxLength = DataCapture.dcs_system_setting.cif_length;
+            //txtCIF.MaxLength = DataCapture.dcs_system_setting.cif_length;
+            //txtCIF_PrincipalMember.MaxLength = DataCapture.dcs_system_setting.cif_length;
         }
 
         private void ManageRecord_Load(object sender, EventArgs e)

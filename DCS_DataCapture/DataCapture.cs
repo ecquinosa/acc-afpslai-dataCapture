@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Data;
 using System.Collections.Generic;
+using accAfpslaiEmvObjct;
 
 namespace DCS_DataCapture
 {
@@ -26,8 +27,9 @@ namespace DCS_DataCapture
         private object voidReason = null;
         private bool IsDuplicate = false;
 
-        public static Class.user dcsUser = null;
-        public static Class.dcs_system_setting dcs_system_setting = null;
+        public static user dcsUser = null;
+        public static dcs_system_setting dcs_system_setting = null;
+        public static MiddleServerApi msa = null;
 
         #region " Shared Methods "
 
@@ -270,7 +272,7 @@ namespace DCS_DataCapture
 
         public bool InsertToDbase(ref string ErrorMsg, string stationName = "", string photoPath="", string zipPath="")
         {
-            Class.member member = new Class.member();
+            member member = new member();
             member.cif = txtCIF.Text;
             member.last_name = txtLName.Text;
             member.first_name = txtFName.Text;
@@ -302,9 +304,9 @@ namespace DCS_DataCapture
             int memberId = 0;
             int addressId = 0;
 
-            Class.cancelCapture cancelCapture = new Class.cancelCapture();
+            cancelCapture cancelCapture = new cancelCapture();
 
-            var responseMember = MiddleServerApi.addMember(member, ref memberId);
+            var responseMember = msa.addMember(member, ref memberId);
             bool response = false;
 
             if (responseMember)
@@ -313,7 +315,7 @@ namespace DCS_DataCapture
                 {
                     cancelCapture.memberId = memberId;
 
-                    Class.address address = new Class.address();
+                    address address = new address();
                     address.member_id = memberId;
                     address.address1 = txtAddress1.Text;
                     address.address2 = txtAddress2.Text;
@@ -323,7 +325,7 @@ namespace DCS_DataCapture
                     address.country_id = (int)cboCountry.SelectedValue;
                     address.zipcode = txtZipCode.Text;
 
-                    var responseAddress = MiddleServerApi.addAddress(address, ref addressId);
+                    var responseAddress = msa.addAddress(address, ref addressId);
 
                     if (responseAddress)
                     {
@@ -331,7 +333,7 @@ namespace DCS_DataCapture
                         {
                             cancelCapture.addressId = addressId;
 
-                            Class.memberImages memberImages = new Class.memberImages();
+                            memberImages memberImages = new memberImages();
                             memberImages.cif = txtCIF.Text;
                             memberImages.dateCaptured = DateTime.Now.ToString();
                             if (System.IO.File.Exists(photoPath))
@@ -348,12 +350,12 @@ namespace DCS_DataCapture
                                 memberImages.base64ZipFile = base64ZipFile;
                             }
 
-                            var responseMemberImages = MiddleServerApi.saveMemberImages(memberImages);
+                            var responseMemberImages = msa.saveMemberImages(memberImages);
 
                             if (responseMemberImages) response = true;
                             else
                             {
-                                var responseCancelCapture = MiddleServerApi.cancelCapture(cancelCapture);
+                                var responseCancelCapture = msa.cancelCapture(cancelCapture);
                             }
                         }
                     }
@@ -428,6 +430,8 @@ namespace DCS_DataCapture
                 }
             }
         }
+
+        
 
         public static void SaveMemberInfoFields()
         {
@@ -709,6 +713,15 @@ namespace DCS_DataCapture
             return bln;
         }
 
+        public bool ValidateLogIn(string userName, string userPass)
+        {
+            InitMiddleServerApi();
+            var response = msa.ValidateLogIn(userName, userPass);
+            if (response) dcsUser = msa.dcsUser;
+
+            return response;
+        }
+
         private bool ValidateDate(DateTimePicker mtb)
         {
             try
@@ -758,7 +771,7 @@ namespace DCS_DataCapture
 
         public bool CheckIfIDHaveDuplicate()
         {
-            Class.member member = new Class.member();
+            member member = new member();
             member.cif = txtCIF.Text;
             member.last_name = txtLName.Text;
             member.first_name = txtFName.Text;
@@ -766,7 +779,7 @@ namespace DCS_DataCapture
             member.suffix = txtSuffix.Text;
             member.print_type_id = (int)cboPrintingType.SelectedValue;
 
-            return !MiddleServerApi.checkMemberIfCaptured(member);
+            return !msa.checkMemberIfCaptured(member);
         }
 
         public void CloseDataCapture()
@@ -777,8 +790,15 @@ namespace DCS_DataCapture
 
         #endregion    
 
+        private void InitMiddleServerApi()
+        {
+            if (msa==null)msa = new MiddleServerApi(Properties.Settings.Default.MiddleServerUrl, Properties.Settings.Default.ApiKey, Properties.Settings.Default.BranchIssue, "Data Capture System");
+        }
+
         private void DataCapture_Load(object sender, EventArgs e)
         {
+            InitMiddleServerApi();
+
             InitMemberInfoTable();            
             PopulateCustomControls();
             //MiddleServerApi.ValidateLogIn("admin", "afPsL@ieMv2021");
@@ -858,17 +878,18 @@ namespace DCS_DataCapture
         }
 
         public static void PopulateComboBox(MiddleServerApi.msApi api, ref ComboBox cbo)
-        {   
+        {
+            //MiddleServerApi msa = new MiddleServerApi(Properties.Settings.Default.MiddleServerUrl, Properties.Settings.Default.ApiKey, Properties.Settings.Default.BranchIssue, "Data Capture System");
             object obj = null;
 
             switch (api)
             {
                 case MiddleServerApi.msApi.getPrintType:
                     
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var printTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.print_type>>(obj.ToString());
-                        printTypes.Insert(0, new Class.print_type { id = 0, printType = "-Select-" });
+                        var printTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<print_type>>(obj.ToString());
+                        printTypes.Insert(0, new print_type { id = 0, printType = "-Select-" });
                         cbo.DataSource = printTypes;
                         cbo.DisplayMember = "printType";
                         cbo.ValueMember = "id";
@@ -876,10 +897,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getAssociateType:
-                    if (MiddleServerApi.GetTable2(api, ref obj))
+                    if (msa.GetTable2(api, ref obj))
                     {
-                        var associateTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.associate_type>>(obj.ToString());
-                        associateTypes.Insert(0, new Class.associate_type { id = 0, associateType = "-Select-" });
+                        var associateTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<associate_type>>(obj.ToString());
+                        associateTypes.Insert(0, new associate_type { id = 0, associateType = "-Select-" });
                         cbo.DataSource = associateTypes;
                         cbo.DisplayMember = "associateType";
                         cbo.ValueMember = "id";
@@ -887,10 +908,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getCivilStatus:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var civilStatuses = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.civil_status>>(obj.ToString());
-                        civilStatuses.Insert(0, new Class.civil_status { id = 0, civilStatus = "-Select-" });
+                        var civilStatuses = Newtonsoft.Json.JsonConvert.DeserializeObject<List<civil_status>>(obj.ToString());
+                        civilStatuses.Insert(0, new civil_status { id = 0, civilStatus = "-Select-" });
                         cbo.DataSource = civilStatuses;
                         cbo.DisplayMember = "civilStatus";
                         cbo.ValueMember = "id";
@@ -898,10 +919,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getMembershipStatus:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var membershipStatuses = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.membership_status>>(obj.ToString());
-                        membershipStatuses.Insert(0, new Class.membership_status { id = 0, membershipStatus = "-Select-" });
+                        var membershipStatuses = Newtonsoft.Json.JsonConvert.DeserializeObject<List<membership_status>>(obj.ToString());
+                        membershipStatuses.Insert(0, new membership_status { id = 0, membershipStatus = "-Select-" });
                         cbo.DataSource = membershipStatuses;
                         cbo.DisplayMember = "membershipStatus";
                         cbo.ValueMember = "id";
@@ -909,10 +930,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getMembershipType:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var membershipTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.membership_type>>(obj.ToString());
-                        membershipTypes.Insert(0, new Class.membership_type { id = 0, membershipType = "-Select-" });
+                        var membershipTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<membership_type>>(obj.ToString());
+                        membershipTypes.Insert(0, new membership_type { id = 0, membershipType = "-Select-" });
                         cbo.DataSource = membershipTypes;
                         cbo.DisplayMember = "membershipType";
                         cbo.ValueMember = "id";
@@ -920,10 +941,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getBranch:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var branches = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.branch>>(obj.ToString());
-                        branches.Insert(0, new Class.branch { id = 0, branchName = "-Select-" });
+                        var branches = Newtonsoft.Json.JsonConvert.DeserializeObject<List<branch>>(obj.ToString());
+                        branches.Insert(0, new branch { id = 0, branchName = "-Select-" });
                         cbo.DataSource = branches;
                         cbo.DisplayMember = "branchName";
                         cbo.ValueMember = "id";
@@ -931,10 +952,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 case MiddleServerApi.msApi.getCountry:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var countries = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.country>>(obj.ToString());
-                        countries.Insert(0, new Class.country { id = 0, countryName = "-Select-" });
+                        var countries = Newtonsoft.Json.JsonConvert.DeserializeObject<List<country>>(obj.ToString());
+                        countries.Insert(0, new country { id = 0, countryName = "-Select-" });
                         cbo.DataSource = countries;
                         cbo.DisplayMember = "countryName";
                         cbo.ValueMember = "id";
@@ -942,10 +963,10 @@ namespace DCS_DataCapture
                     }
                     break;
                 default:
-                    if (MiddleServerApi.GetTable(api, ref obj))
+                    if (msa.GetTable(api, ref obj))
                     {
-                        var replaceReasons = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.recard_reason>>(obj.ToString());
-                        replaceReasons.Insert(0, new Class.recard_reason { id = 0, recardReason = "-Select-" });
+                        var replaceReasons = Newtonsoft.Json.JsonConvert.DeserializeObject<List<recard_reason>>(obj.ToString());
+                        replaceReasons.Insert(0, new recard_reason { id = 0, recardReason = "-Select-" });
                         cbo.DataSource = replaceReasons;
                         cbo.DisplayMember = "recardReason";
                         cbo.ValueMember = "id";
@@ -958,9 +979,9 @@ namespace DCS_DataCapture
         private void GetDCSSystemSettings()
         {
             object obj = null;
-            if (MiddleServerApi.GetTable(MiddleServerApi.msApi.getDCSSystemSetting, ref obj))
+            if (msa.GetTable(MiddleServerApi.msApi.getDCSSystemSetting, ref obj))
             {
-                var response = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.dcs_system_setting>>(obj.ToString());
+                var response = Newtonsoft.Json.JsonConvert.DeserializeObject<List<dcs_system_setting>>(obj.ToString());
                 dcs_system_setting = response[0];
             }
         }
@@ -968,11 +989,11 @@ namespace DCS_DataCapture
         private void GetOnlineRegistration()
         {
             object obj = null;
-            if (MiddleServerApi.GetTable(MiddleServerApi.msApi.getOnlineRegistration, ref obj, "{ 'reference_number': '" + txtReferenceNumber.Text + "' }"))
+            if (msa.GetTable(MiddleServerApi.msApi.getOnlineRegistration, ref obj, "{ 'reference_number': '" + txtReferenceNumber.Text + "' }"))
             {
                 if (obj.ToString().Length != 2)
                 {
-                    var response = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Class.online_registration>>(obj.ToString());
+                    var response = Newtonsoft.Json.JsonConvert.DeserializeObject<List<online_registration>>(obj.ToString());
                     var online_registration = response[0];
                     //txtReferenceNumber.Text = online_registration.reference_number;
                     txtCIF.Text = online_registration.cif;
@@ -989,8 +1010,8 @@ namespace DCS_DataCapture
                 }
                 else
                 {
-                    Class.Utilities.ShowWarningMessage("Reference number not found.");
-                    txtCIF.Text = "";
+                    Utilities.ShowWarningMessage("Reference number not found.", "Data Capture System");                    
+                    ResetForm();
                 }
             }
         }
@@ -998,9 +1019,9 @@ namespace DCS_DataCapture
         private void GetCBSData()
         {
             object obj = null;
-            if (MiddleServerApi.GetTable(MiddleServerApi.msApi.pullCBSData, ref obj, "{ 'cif': '" + txtCIF.Text + "' }"))
+            if (msa.GetTable(MiddleServerApi.msApi.pullCBSData, ref obj, "{ 'cif': '" + txtCIF.Text + "' }"))
             {
-                var cbsData = Newtonsoft.Json.JsonConvert.DeserializeObject<Class.cbsData>(obj.ToString());
+                var cbsData = Newtonsoft.Json.JsonConvert.DeserializeObject<cbsData>(obj.ToString());
 
                 if (cbsData.cif != null)
                 {                                   
@@ -1033,7 +1054,7 @@ namespace DCS_DataCapture
                 }
                 else
                 {
-                    Class.Utilities.ShowWarningMessage("CIF not found.");
+                    Utilities.ShowWarningMessage("CIF not found.", "Data Capture System");
                     ResetForm();
                 }
             }
@@ -1054,22 +1075,25 @@ namespace DCS_DataCapture
 
         private bool IsPrimeFieldsHaveChanges()
         {
-            string _date1 = string.Format("{0}/{1}/{2}", mtbDateOfBirth.Text.Split('/')[1], mtbDateOfBirth.Text.Split('/')[0], mtbDateOfBirth.Text.Split('/')[2]);
-            DataRow rw = dtOldTable.Rows[0];
-            if (txtCIF.Text.Trim().ToUpper() != rw["CIF"].ToString().Trim().ToUpper())
-                return true;
-            else if (txtFName.Text.Trim().ToUpper() != rw["FName"].ToString().Trim().ToUpper())
-                return true;
-            else if (txtMName.Text.Trim().ToUpper() != rw["MName"].ToString().Trim().ToUpper())
-                return true;
-            else if (txtLName.Text.Trim().ToUpper() != rw["LName"].ToString().Trim().ToUpper())
-                return true;
-            else if (txtSuffix.Text.Trim().ToUpper() != rw["Suffix"].ToString().Trim().ToUpper())
-                return true;
-            else if (_date1 != Convert.ToDateTime(rw["DateOfBirth"].ToString()).ToString("MM/dd/yyyy"))
-                return true;
-            else
-                return false;
+            //string _date1 = string.Format("{0}/{1}/{2}", mtbDateOfBirth.Text.Split('/')[1], mtbDateOfBirth.Text.Split('/')[0], mtbDateOfBirth.Text.Split('/')[2]);
+            //DataRow rw = dtOldTable.Rows[0];
+            //if (txtCIF.Text.Trim().ToUpper() != rw["CIF"].ToString().Trim().ToUpper())
+            //    return true;
+            //else if (txtFName.Text.Trim().ToUpper() != rw["FName"].ToString().Trim().ToUpper())
+            //    return true;
+            //else if (txtMName.Text.Trim().ToUpper() != rw["MName"].ToString().Trim().ToUpper())
+            //    return true;
+            //else if (txtLName.Text.Trim().ToUpper() != rw["LName"].ToString().Trim().ToUpper())
+            //    return true;
+            //else if (txtSuffix.Text.Trim().ToUpper() != rw["Suffix"].ToString().Trim().ToUpper())
+            //    return true;
+            //else if (_date1 != Convert.ToDateTime(rw["DateOfBirth"].ToString()).ToString("MM/dd/yyyy"))
+            //    return true;
+            //else
+            //    return false;
+
+            //disable on this version
+            return false;
         }
 
         private void BindData()
@@ -1852,7 +1876,7 @@ namespace DCS_DataCapture
         {
             if (txtCIF.Text == "")
             {
-                Class.Utilities.ShowWarningMessage("Please enter CIF to search.");
+                Utilities.ShowWarningMessage("Please enter CIF to search.", "Data Capture System");
                 txtCIF.Focus();
                 return;
             }
@@ -1864,7 +1888,7 @@ namespace DCS_DataCapture
         {
             if (txtReferenceNumber.Text == "")
             {
-                Class.Utilities.ShowWarningMessage("Please enter reference number to search.");
+                Utilities.ShowWarningMessage("Please enter reference number to search.", "Data Capture System");                
                 txtReferenceNumber.Focus();
                 return;
             }

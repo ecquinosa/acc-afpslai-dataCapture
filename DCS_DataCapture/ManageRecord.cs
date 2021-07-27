@@ -29,7 +29,7 @@ namespace DCS_DataCapture
             PopulateComboBox("tblReplaceReason", "ReasonID", "Reason", ref cboReplaceReason);
             PopulateComboBox("tblBranch", "Code", "Branch", ref cboBranchIssue);
             PopulateCboCountry("tblCountry", "Country", "Country", ref cboCountry);
-            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(Properties.Settings.Default.BranchIssue);
+            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(DataCapture.dcsDataCaptureConfig.branchIssue);
             cboCountry.SelectedIndex = cboCountry.FindStringExact("Philippines");
 
             if (cboGender.Items.Count > 0) { cboGender.SelectedIndex = 0; }

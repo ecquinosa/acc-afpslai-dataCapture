@@ -188,10 +188,6 @@ D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Deb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.dll
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvEncDec.pdb
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.pdb
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.xml
-D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_MemberInfo.pdb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.xml
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.AssemblyReference.cache
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
@@ -213,3 +209,32 @@ D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Deb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.dll
 D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.AssemblyReference.cache
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.AddNewField.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.DataCapture.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.DCSUsers.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.ExcelExceptions.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.MaintenanceTable.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageDataCaptureFields.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.ManageRecord.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.Preview.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.Properties.Resources.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.Setting.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.Simulator.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.VoidTxn.resources
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.GenerateResource.cache
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CoreCompileInputs.cache
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.dll
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll.config
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.dll
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_DataCapture.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.dll
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.dll
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvEncDec.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\AllcardEncryptDecrypt.xml
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_MemberInfo.pdb
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.xml
+C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CopyComplete

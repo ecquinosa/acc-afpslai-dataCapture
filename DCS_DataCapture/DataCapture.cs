@@ -13,23 +13,25 @@ namespace DCS_DataCapture
     {
         public DataCapture()
         {
-            InitializeComponent();            
+            InitializeComponent();
 
             txtFName.KeyPress += textBox1_KeyPress;
             txtMName.KeyPress += textBox1_KeyPress;
             txtLName.KeyPress += textBox1_KeyPress;
             txtSuffix.KeyPress += textBox1_KeyPress;
-            txtFullName_Contact.KeyPress += textBox1_KeyPress;            
+            txtFullName_Contact.KeyPress += textBox1_KeyPress;         
         }
 
+        public static string dcsDataCaptureConfigFile = String.Format(@"{0}\{1}", Application.StartupPath, "dcsDataCaptureConfig");
         private DataTable dtOldTable;
         private object userID = null;
         private object voidReason = null;
         private bool IsDuplicate = false;
 
-        public static user dcsUser = null;
+        //public static user dcsUser = null;
         public static dcs_system_setting dcs_system_setting = null;
         public static MiddleServerApi msa = null;
+        public static Class.dcsDataCaptureConfig dcsDataCaptureConfig = null;
 
         #region " Shared Methods "
 
@@ -162,6 +164,11 @@ namespace DCS_DataCapture
             get { return "AFPSLAI"; }
         }
 
+        public static string AppVersion
+        {
+            get { return "2"; }
+        }
+
         public static string AssemblyNameAndProductVersion
         {
             get
@@ -175,22 +182,22 @@ namespace DCS_DataCapture
 
         private Control FindControl(string ControlName)
         {
-            Control foundCtrl = null;            
+            Control foundCtrl = null;
 
             foreach (Control ctrlFirst in pnlMain.Controls)
-            {                
+            {
                 Control _ctrlFirst = ctrlFirst;
 
                 if (!_ctrlFirst.HasChildren)
                 {
                     if (_ctrlFirst.Name.ToUpper() == ControlName.ToUpper())
                     {
-                        foundCtrl = _ctrlFirst;                 
+                        foundCtrl = _ctrlFirst;
                         break;
                     }
                 }
                 else
-                {                    
+                {
                     foreach (Control ctrlSecond in _ctrlFirst.Controls)
                     {
                         Control _ctrlSecond = ctrlSecond;
@@ -199,12 +206,12 @@ namespace DCS_DataCapture
                         {
                             if (_ctrlSecond.Name.ToUpper() == ControlName.ToUpper())
                             {
-                                foundCtrl = _ctrlSecond;                     
+                                foundCtrl = _ctrlSecond;
                                 break;
                             }
                         }
 
-                    }                   
+                    }
                 }
             }
 
@@ -212,9 +219,9 @@ namespace DCS_DataCapture
         }
 
         public bool Submit()
-        {         
+        {
             SaveStaticData();
-            
+
             if (Convert.ToInt16(cboReplaceReason.SelectedValue.ToString()) != 3)
             {
                 return true;
@@ -222,8 +229,8 @@ namespace DCS_DataCapture
             else
             {
                 string origPath = string.Format(@"{0}\{1}\{2}", DCS_MemberInfo.Data.CapturedDataRepo, Convert.ToDateTime(dtOldTable.Rows[0]["DatePosted"].ToString().Trim()).ToString("MMddyyyy"), dtOldTable.Rows[0]["CIF"].ToString().Trim());
-                string backupPath = string.Format(@"{0}\{1}\{2}_{3}", DCS_MemberInfo.Data.CapturedDataRepo, Convert.ToDateTime(dtOldTable.Rows[0]["DatePosted"].ToString().Trim()).ToString("MMddyyyy"), dtOldTable.Rows[0]["CIF"].ToString().Trim(), DateTime.Now.ToString("ddMMyyyy_hhmmss"));              
-                string destiPath = string.Format(@"{0}\{1}\{2}", DCS_MemberInfo.Data.CapturedDataRepo, DateTime.Today.ToString("MMddyyyy"), txtCIF.Text);                
+                string backupPath = string.Format(@"{0}\{1}\{2}_{3}", DCS_MemberInfo.Data.CapturedDataRepo, Convert.ToDateTime(dtOldTable.Rows[0]["DatePosted"].ToString().Trim()).ToString("MMddyyyy"), dtOldTable.Rows[0]["CIF"].ToString().Trim(), DateTime.Now.ToString("ddMMyyyy_hhmmss"));
+                string destiPath = string.Format(@"{0}\{1}\{2}", DCS_MemberInfo.Data.CapturedDataRepo, DateTime.Today.ToString("MMddyyyy"), txtCIF.Text);
 
                 //if (!System.IO.Directory.Exists(origPath))
                 //{                    
@@ -270,7 +277,7 @@ namespace DCS_DataCapture
             }
         }
 
-        public bool InsertToDbase(ref string ErrorMsg, string stationName = "", string photoPath="", string zipPath="")
+        public bool InsertToDbase(ref string ErrorMsg, string stationName = "", string photoPath = "", string zipPath = "")
         {
             member member = new member();
             member.cif = txtCIF.Text;
@@ -280,7 +287,7 @@ namespace DCS_DataCapture
             member.suffix = txtSuffix.Text;
             member.gender = cboGender.Text;
             member.date_birth = mtbDateOfBirth.Value.Date;
-            if(cboMaritalStatus.SelectedIndex>0) member.civil_status_id = (int)cboMaritalStatus.SelectedValue;
+            if (cboMaritalStatus.SelectedIndex > 0) member.civil_status_id = (int)cboMaritalStatus.SelectedValue;
             if (cboMembershipStatus.SelectedIndex > 0) member.membership_type_id = (int)cboMembershipStatus.SelectedValue;
             if (cboMembershipType.SelectedIndex > 0) member.membership_status_id = (int)cboMembershipType.SelectedValue;
             if (cboPrintingType.SelectedIndex > 0) member.print_type_id = (int)cboPrintingType.SelectedValue;
@@ -292,9 +299,9 @@ namespace DCS_DataCapture
             member.emergency_contact_nos = txtContactNos_Contact.Text;
             if (cboMaritalStatus.SelectedIndex > 0) member.principal_associate_type_id = (int)cboAssociateType.SelectedValue;
             member.principal_cif = txtCIF_PrincipalMember.Text;
-            member.principal_name =txtPrincipalName.Text;
+            member.principal_name = txtPrincipalName.Text;
             member.cca_no = txtCCANo.Text;
-            member.user_id = dcsUser.userId;
+            member.user_id = msa.dcsUser.userId;
             member.terminal_id = stationName;
             member.branch_id = (int)cboBranchIssue.SelectedValue;
             member.online_reference_number = txtReferenceNumber.Text;
@@ -364,7 +371,7 @@ namespace DCS_DataCapture
 
             return response;
         }
-      
+
         public void ShowManageDataCaptureFieldsForm()
         {
             ManageDataCaptureFields _frm = new ManageDataCaptureFields();
@@ -382,12 +389,12 @@ namespace DCS_DataCapture
             {
                 DCS_MemberInfo.Data.AddMemberInfoRow("PrintingType", "", "Printing Type:", "cboPrintingType", "ComboBox", true, true, true, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("ReplaceReason", "", "Replace Reason:", "cboReplaceReason", "ComboBox", true, false, true, true, true);
-                DCS_MemberInfo.Data.AddMemberInfoRow("CIF_ID", "", "CIF ID:", "txtCIF", "TextBox", true, true, true, true, true);                
+                DCS_MemberInfo.Data.AddMemberInfoRow("CIF_ID", "", "CIF ID:", "txtCIF", "TextBox", true, true, true, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("FirstName", "", "First Name:", "txtFName", "TextBox", true, true, true, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MiddleName", "", "Middle Name:", "txtMName", "TextBox", true, false, true, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("LastName", "", "Last Name:", "txtLName", "TextBox", true, true, true, true, true);
-                DCS_MemberInfo.Data.AddMemberInfoRow("Suffix", "", "Suffix:", "txtSuffix", "TextBox", true, false,false, true, true);
-                DCS_MemberInfo.Data.AddMemberInfoRow("Gender", "", "Gender:", "cboGender", "ComboBox", true, true, false, true, false);                
+                DCS_MemberInfo.Data.AddMemberInfoRow("Suffix", "", "Suffix:", "txtSuffix", "TextBox", true, false, false, true, true);
+                DCS_MemberInfo.Data.AddMemberInfoRow("Gender", "", "Gender:", "cboGender", "ComboBox", true, true, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("DateOfBirth", "", "Date of Birth:", "mtbDateOfBirth", "DateTimePicker", true, true, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MaritalStatus", "", "Marital Status:", "cboMaritalStatus", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipDate", "", "Membership Date:", "mtbMembershipDate", "DateTimePicker", true, false, false, false, false);
@@ -395,7 +402,7 @@ namespace DCS_DataCapture
                 DCS_MemberInfo.Data.AddMemberInfoRow("MembershipType", "", "Membership Type:", "cboMembershipType", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("MobileNos", "", "Mobile Nos:", "txtMobileNos", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("ContactNos", "", "Contact Nos:", "txtContactNos", "ComboBox", true, false, false, false, false);
-                DCS_MemberInfo.Data.AddMemberInfoRow("IDNumber", "", "ID Number:", "txtIDNumber", "TextBox", true, false, false, false, true);                
+                DCS_MemberInfo.Data.AddMemberInfoRow("IDNumber", "", "ID Number:", "txtIDNumber", "TextBox", true, false, false, false, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("BranchIssue", "", "Branch Issue:", "cboBranchIssue", "ComboBox", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Address1", "", "Address1:", "txtAddress1", "TextBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Address2", "", "Address2:", "txtAddress2", "TextBox", true, false, false, true, false);
@@ -404,10 +411,10 @@ namespace DCS_DataCapture
                 DCS_MemberInfo.Data.AddMemberInfoRow("Province", "", "Province:", "txtProvince", "TextBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Country", "", "Country:", "cboCountry", "ComboBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("ZipCode", "", "ZipCodeAddress:", "txtZipCode", "TextBox", true, false, false, true, false);
-                DCS_MemberInfo.Data.AddMemberInfoRow("FullName_Contact", "", "Contact Name:", "txtFullName_Contact", "TextBox", true, false, false, true, false);                
+                DCS_MemberInfo.Data.AddMemberInfoRow("FullName_Contact", "", "Contact Name:", "txtFullName_Contact", "TextBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("ContactNos_Contact", "", "Contact Nos.:", "txtContactNos_Contact", "TextBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("AssociateType", "", "Associate Type:", "cboAssociateType", "ComboBox", true, false, false, true, false);
-                DCS_MemberInfo.Data.AddMemberInfoRow("CIF_ID_PrincipalMember","", "Principal Member CIF:", "txtCIF_PrincipalMember", "TextBox", true, false, false, true, true);
+                DCS_MemberInfo.Data.AddMemberInfoRow("CIF_ID_PrincipalMember", "", "Principal Member CIF:", "txtCIF_PrincipalMember", "TextBox", true, false, false, true, true);
                 DCS_MemberInfo.Data.AddMemberInfoRow("PrincipalName", "", "Principal Name:", "txtPrincipalName", "TextBox", true, false, false, true, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("IDs", "", "IDs:", "lblIDs", "Label", true, false, false, false, false);
                 DCS_MemberInfo.Data.AddMemberInfoRow("Supervisor", "", "Supervisor:", "lblSupervisor", "Label", true, false, false, false, false);
@@ -431,7 +438,7 @@ namespace DCS_DataCapture
             }
         }
 
-        
+
 
         public static void SaveMemberInfoFields()
         {
@@ -462,18 +469,18 @@ namespace DCS_DataCapture
                 middleName = " ";
 
             if (_Suffix != "")
-                suffix = " " + suffix;            
+                suffix = " " + suffix;
 
-            if (_Suffix=="")
-                _MemberName = string.Format("{0}{1}{2}",_FName, middleName, _LName);
+            if (_Suffix == "")
+                _MemberName = string.Format("{0}{1}{2}", _FName, middleName, _LName);
             else
                 _MemberName = string.Format("{0}{1}{2}{3}", _FName, middleName, _LName, suffix);
 
             _DOB = mtbDateOfBirth.Text;
             _DOI = DateTime.Today.ToString(DateFormat());
-            _Gender = cboGender.Text;            
+            _Gender = cboGender.Text;
             if (txtContactNos.Text != "") _ContactNos = txtContactNos.Text;
-                else _ContactNos = txtMobileNos.Text;
+            else _ContactNos = txtMobileNos.Text;
 
             if (cboBranchIssue.Text.Trim().ToUpper() == "-SELECT-")
                 _BranchIssue = "";
@@ -511,7 +518,7 @@ namespace DCS_DataCapture
             else
                 zipcode = " ";
 
-            _CompleteAddress = String.Format("{0}{1}{2}{3}{4}{5}",txtAddress1.Text, address2, address3, city, province, zipcode);
+            _CompleteAddress = String.Format("{0}{1}{2}{3}{4}{5}", txtAddress1.Text, address2, address3, city, province, zipcode);
 
             _Name_Contact = txtFullName_Contact.Text;
             _ContactNos_Contact = txtContactNos_Contact.Text;
@@ -520,7 +527,7 @@ namespace DCS_DataCapture
 
             _MembershipType = cboMembershipType.Text;
 
-            if(cboAssociateType.Text.Trim().ToUpper()=="-SELECT-")
+            if (cboAssociateType.Text.Trim().ToUpper() == "-SELECT-")
                 _AssociateType = "";
             else
                 _AssociateType = cboAssociateType.Text;
@@ -530,7 +537,7 @@ namespace DCS_DataCapture
 
             _IDNumber = txtIDNumber.Text;
 
-            lblIDs.Text = string.Format("{0},{1},{2},{3},{4},{5},{6}", 
+            lblIDs.Text = string.Format("{0},{1},{2},{3},{4},{5},{6}",
                                         cboPrintingType.SelectedIndex == 0 ? "0" : cboPrintingType.SelectedValue.ToString(),
                                         cboReplaceReason.SelectedIndex == 0 ? "0" : cboReplaceReason.SelectedValue.ToString(),
                                         cboMaritalStatus.SelectedIndex == 0 ? "0" : cboMaritalStatus.SelectedValue.ToString(),
@@ -626,7 +633,7 @@ namespace DCS_DataCapture
                 //if (!chkRecapture.Checked)
                 if (true)
                 {
-                    IsDuplicate = CheckIfIDHaveDuplicate();                    
+                    IsDuplicate = CheckIfIDHaveDuplicate();
 
                     if (IsDuplicate)
                     {
@@ -638,47 +645,47 @@ namespace DCS_DataCapture
                         bln = ValidateDate(mtbMembershipDate);
 
                     if (bln)
-                        {                        
+                    {
                         if (GetAge() < 10)
+                        {
+                            _ErrorMessage = "Please enter valid date of birth";
+                            errorProvider1.SetError(mtbDateOfBirth, _ErrorMessage);
+                            bln = false;
+                        }
+                        else if (Convert.ToInt32(cboMembershipType.SelectedValue) == 1)
+                        {
+                            if (GetAge() < dcs_system_setting.member_type_reg_allow_yrs)
                             {
-                                _ErrorMessage = "Please enter valid date of birth";
+                                _ErrorMessage = "Please enter valid date of birth for Regular";
                                 errorProvider1.SetError(mtbDateOfBirth, _ErrorMessage);
                                 bln = false;
-                            }                        
-                        else if (Convert.ToInt32(cboMembershipType.SelectedValue) == 1)
+                            }
+                        }
+                        else if (Convert.ToInt32(cboMembershipType.SelectedValue) == 2)
+                        {
+                            if (GetAge() < dcs_system_setting.member_type_assoc_allow_yrs)
                             {
-                                if (GetAge() < dcs_system_setting.member_type_reg_allow_yrs)
+                                _ErrorMessage = "Please enter valid date of birth for Associate";
+                                errorProvider1.SetError(mtbDateOfBirth, _ErrorMessage);
+                                bln = false;
+                            }
+                            else if (Convert.ToInt32(cboAssociateType.SelectedValue) == 1)
+                            {
+                                if (txtCIF_PrincipalMember.Text == "")
                                 {
-                                    _ErrorMessage = "Please enter valid date of birth for Regular";
-                                    errorProvider1.SetError(mtbDateOfBirth, _ErrorMessage);
+                                    _ErrorMessage = "Please enter CIF of Principal";
+                                    errorProvider1.SetError(txtCIF_PrincipalMember, _ErrorMessage);
+                                    bln = false;
+                                }
+                                else if (txtPrincipalName.Text == "")
+                                {
+                                    _ErrorMessage = "Please enter Name of Principal";
+                                    errorProvider1.SetError(txtPrincipalName, _ErrorMessage);
                                     bln = false;
                                 }
                             }
-                        else if (Convert.ToInt32(cboMembershipType.SelectedValue) == 2)
-                            {
-                                if (GetAge() < dcs_system_setting.member_type_assoc_allow_yrs)
-                                {
-                                    _ErrorMessage = "Please enter valid date of birth for Associate";
-                                    errorProvider1.SetError(mtbDateOfBirth, _ErrorMessage);
-                                    bln = false;
-                                }
-                                else if (Convert.ToInt32(cboAssociateType.SelectedValue) == 1)
-                                {
-                                    if (txtCIF_PrincipalMember.Text == "")
-                                    {
-                                        _ErrorMessage = "Please enter CIF of Principal";
-                                        errorProvider1.SetError(txtCIF_PrincipalMember, _ErrorMessage);
-                                        bln = false;
-                                    }
-                                    else if (txtPrincipalName.Text == "")
-                                    {
-                                        _ErrorMessage = "Please enter Name of Principal";
-                                        errorProvider1.SetError(txtPrincipalName, _ErrorMessage);
-                                        bln = false;
-                                    }
-                                }
-                        }                       
-                    }                                                    
+                        }
+                    }
                 }
             }
 
@@ -717,9 +724,15 @@ namespace DCS_DataCapture
         {
             InitMiddleServerApi();
             var response = msa.ValidateLogIn(userName, userPass);
-            if (response) dcsUser = msa.dcsUser;
+            //if (response) dcsUser = msa.dcsUser;
 
             return response;
+        }
+
+        public MiddleServerApi middleServerApi()
+        {
+            InitMiddleServerApi();
+            return msa;
         }
 
         private bool ValidateDate(DateTimePicker mtb)
@@ -728,9 +741,9 @@ namespace DCS_DataCapture
             {
                 if (mtb.Text.Trim().Replace(" ", "") != "//")
                 {
-                    string _date = string.Format("{0}/{1}/{2}",mtb.Text.Split('/')[1], mtb.Text.Split('/')[0], mtb.Text.Split('/')[2]);
+                    string _date = string.Format("{0}/{1}/{2}", mtb.Text.Split('/')[1], mtb.Text.Split('/')[0], mtb.Text.Split('/')[2]);
                     Convert.ToDateTime(_date);
-                }                    
+                }
 
                 return true;
             }
@@ -784,7 +797,7 @@ namespace DCS_DataCapture
 
         public void CloseDataCapture()
         {
-            
+
         }
 
 
@@ -792,59 +805,76 @@ namespace DCS_DataCapture
 
         private void InitMiddleServerApi()
         {
-            if (msa==null)msa = new MiddleServerApi(Properties.Settings.Default.MiddleServerUrl, Properties.Settings.Default.ApiKey, Properties.Settings.Default.BranchIssue, "Data Capture System");
+            if (dcsDataCaptureConfig == null)
+            {
+                if (System.IO.File.Exists(dcsDataCaptureConfigFile)) dcsDataCaptureConfig = Newtonsoft.Json.JsonConvert.DeserializeObject<Class.dcsDataCaptureConfig>(System.IO.File.ReadAllText(dcsDataCaptureConfigFile));
+            }
+
+            if (dcsDataCaptureConfig != null)
+            {
+                if (msa == null) msa = new MiddleServerApi(dcsDataCaptureConfig.middleServerUrl, dcsDataCaptureConfig.apiKey, dcsDataCaptureConfig.branchIssue, MiddleServerApi.afpslaiEmvSystem.dcs);
+            }
         }
 
         private void DataCapture_Load(object sender, EventArgs e)
         {
             InitMiddleServerApi();
 
-            InitMemberInfoTable();            
+            InitMemberInfoTable();
             PopulateCustomControls();
-            //MiddleServerApi.ValidateLogIn("admin", "afPsL@ieMv2021");
-            PopulateComboBox(MiddleServerApi.msApi.getAssociateType, ref cboAssociateType);
-            PopulateComboBox(MiddleServerApi.msApi.getCivilStatus, ref cboMaritalStatus);
-            PopulateComboBox(MiddleServerApi.msApi.getMembershipStatus, ref cboMembershipStatus);
-            PopulateComboBox(MiddleServerApi.msApi.getMembershipType, ref cboMembershipType);
-            PopulateComboBox(MiddleServerApi.msApi.getPrintType, ref cboPrintingType);
-            PopulateComboBox(MiddleServerApi.msApi.getRecardReason, ref cboReplaceReason);
-            PopulateComboBox(MiddleServerApi.msApi.getBranch, ref cboBranchIssue);
-            PopulateComboBox(MiddleServerApi.msApi.getCountry, ref cboCountry);
-            //PopulateCboCountry("tblCountry", "Country", "Country", ref cboCountry);
-            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(Properties.Settings.Default.BranchIssue);
-            cboCountry.SelectedIndex = cboCountry.FindStringExact("Philippines");
 
-            if (cboGender.Items.Count > 0) { cboGender.SelectedIndex = 0; }
-
-            lblSupervisor.Text = "";
-            lblVoidReason.Text = "";
-            lblRefDataID.Text = "";
-
-            cboPrintingType.Select();
-            cboPrintingType.Focus();
-
-            if(cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
-
-            GetDCSSystemSettings();
-
-            if (dcsUser != null)
+            if (msa.checkServerDBStatus(dcsDataCaptureConfig.middleServerUrl))
             {
-                if (dcsUser.roleId == 2)
-                {
-                    linkLabel1.Visible = true;
-                    lbManageTables.Visible = true;
-                }
-                else
-                {
-                    linkLabel1.Visible = false;
-                    lbManageTables.Visible = false;
-                }
-            }
+                //MiddleServerApi.ValidateLogIn("admin", "afPsL@ieMv2021");
+                PopulateComboBox(MiddleServerApi.msApi.getAssociateType, ref cboAssociateType);
+                PopulateComboBox(MiddleServerApi.msApi.getCivilStatus, ref cboMaritalStatus);
+                PopulateComboBox(MiddleServerApi.msApi.getMembershipStatus, ref cboMembershipStatus);
+                PopulateComboBox(MiddleServerApi.msApi.getMembershipType, ref cboMembershipType);
+                PopulateComboBox(MiddleServerApi.msApi.getPrintType, ref cboPrintingType);
+                PopulateComboBox(MiddleServerApi.msApi.getRecardReason, ref cboReplaceReason);
+                PopulateComboBox(MiddleServerApi.msApi.getBranch, ref cboBranchIssue);
+                PopulateComboBox(MiddleServerApi.msApi.getCountry, ref cboCountry);
+                //PopulateCboCountry("tblCountry", "Country", "Country", ref cboCountry);
+                cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(dcsDataCaptureConfig.branchIssue);
+                cboCountry.SelectedIndex = cboCountry.FindStringExact("Philippines");
 
-            txtCIF.MaxLength = dcs_system_setting.cif_length;
-            txtCIF_PrincipalMember.MaxLength = dcs_system_setting.cif_length;
-            txtCardName.MaxLength = dcs_system_setting.cardname_length;
-            txtMobileNos.MaxLength = 11;
+                if (cboGender.Items.Count > 0) { cboGender.SelectedIndex = 0; }
+
+                lblSupervisor.Text = "";
+                lblVoidReason.Text = "";
+                lblRefDataID.Text = "";
+
+                cboPrintingType.Select();
+                cboPrintingType.Focus();
+
+                if (cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
+
+                GetDCSSystemSettings();
+
+                if (msa.dcsUser != null)
+                {
+                    if (msa.dcsUser.roleId == 2)
+                    {
+                        linkLabel1.Visible = true;
+                        lbManageTables.Visible = true;
+                    }
+                    else
+                    {
+                        linkLabel1.Visible = false;
+                        lbManageTables.Visible = false;
+                    }
+                }
+
+                txtCIF.MaxLength = dcs_system_setting.cif_length;
+                txtCIF_PrincipalMember.MaxLength = dcs_system_setting.cif_length;
+                txtCardName.MaxLength = dcs_system_setting.cardname_length;
+                txtMobileNos.MaxLength = 11;
+            }
+            else
+            {
+                Utilities.ShowErrorMessage("Unable to connect to " + dcsDataCaptureConfig.middleServerUrl);
+                //Environment.Exit(0);
+            }
         }
 
         private void PopulateCombobox2(MiddleServerApi.msApi api)
@@ -879,13 +909,13 @@ namespace DCS_DataCapture
 
         public static void PopulateComboBox(MiddleServerApi.msApi api, ref ComboBox cbo)
         {
-            //MiddleServerApi msa = new MiddleServerApi(Properties.Settings.Default.MiddleServerUrl, Properties.Settings.Default.ApiKey, Properties.Settings.Default.BranchIssue, "Data Capture System");
+            //MiddleServerApi msa = new MiddleServerApi(Properties.Settings.Default.MiddleServerUrl, Properties.Settings.Default.ApiKey, Properties.Settings.Default.BranchIssue);
             object obj = null;
 
             switch (api)
             {
                 case MiddleServerApi.msApi.getPrintType:
-                    
+
                     if (msa.GetTable(api, ref obj))
                     {
                         var printTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<print_type>>(obj.ToString());
@@ -973,7 +1003,7 @@ namespace DCS_DataCapture
                         cbo.SelectedIndex = 0;
                     }
                     break;
-            }           
+            }
         }
 
         private void GetDCSSystemSettings()
@@ -1010,7 +1040,7 @@ namespace DCS_DataCapture
                 }
                 else
                 {
-                    Utilities.ShowWarningMessage("Reference number not found.", "Data Capture System");                    
+                    Utilities.ShowWarningMessage("Reference number not found.");
                     ResetForm();
                 }
             }
@@ -1024,12 +1054,12 @@ namespace DCS_DataCapture
                 var cbsData = Newtonsoft.Json.JsonConvert.DeserializeObject<cbsData>(obj.ToString());
 
                 if (cbsData.cif != null)
-                {                                   
+                {
                     txtCIF.Text = cbsData.cif;
                     txtFName.Text = cbsData.first_name;
                     txtMName.Text = cbsData.middle_name;
                     txtLName.Text = cbsData.last_name;
-                    txtSuffix.Text = cbsData.suffix;                    
+                    txtSuffix.Text = cbsData.suffix;
                     mtbDateOfBirth.Value = Convert.ToDateTime(cbsData.date_birth);
                     mtbMembershipDate.Value = Convert.ToDateTime(cbsData.membership_date);
                     txtMobileNos.Text = cbsData.mobile_nos;
@@ -1041,7 +1071,7 @@ namespace DCS_DataCapture
                     txtProvince.Text = cbsData.province;
                     txtZipCode.Text = cbsData.zipCode;
                     txtFullName_Contact.Text = cbsData.emergency_contact_name;
-                    txtContactNos_Contact.Text = cbsData.emergency_contact_nos;                   
+                    txtContactNos_Contact.Text = cbsData.emergency_contact_nos;
                     txtPrincipalName.Text = cbsData.principal_name;
                     txtCIF_PrincipalMember.Text = cbsData.principal_cif;
                     txtCCANo.Text = cbsData.cca_no;
@@ -1054,7 +1084,7 @@ namespace DCS_DataCapture
                 }
                 else
                 {
-                    Utilities.ShowWarningMessage("CIF not found.", "Data Capture System");
+                    Utilities.ShowWarningMessage("CIF not found.");
                     ResetForm();
                 }
             }
@@ -1195,15 +1225,15 @@ namespace DCS_DataCapture
 
         private Control[] ControlsToValidate()
         {
-            Control[] _ctrls= new Control[1];
+            Control[] _ctrls = new Control[1];
             short index = 0;
 
             foreach (DataRow rw in DCS_MemberInfo.Data.MemberInfo.Select("IsMandatory=True"))
             {
-                string ControlName = rw["ControlName"].ToString();                
+                string ControlName = rw["ControlName"].ToString();
                 _ctrls[index] = FindControl(ControlName);
                 index += 1;
-                Array.Resize(ref _ctrls, index+1);
+                Array.Resize(ref _ctrls, index + 1);
             }
 
             return _ctrls;
@@ -1219,7 +1249,7 @@ namespace DCS_DataCapture
                     if (((TextBox)ctrl).Text == "")
                     {
                         errorProvider1.SetError(ctrl, "Enter value here");
-                        bln = false;                                        
+                        bln = false;
                     }
                     else
                     {
@@ -1254,7 +1284,7 @@ namespace DCS_DataCapture
                     {
                         errorProvider1.SetError(ctrl, "Enter value here");
                         bln = false;
-                    }                     
+                    }
                     else
                     {
                         errorProvider1.SetError(ctrl, string.Empty);
@@ -1281,8 +1311,8 @@ namespace DCS_DataCapture
             }
 
             return bln;
-        }                            
-                
+        }
+
         //private short intTextBoxTopVariable = 26;
         //private int intLabelLastTop = 91;//27;
         //private int intTextBoxLastTop = 90;//26;
@@ -1293,10 +1323,10 @@ namespace DCS_DataCapture
             AddNewField _addnew = new AddNewField();
             _addnew.ShowDialog();
             if (_addnew.IsHaveChanges)
-            {                          
+            {
                 PopulateCustomControls();
             }
-        }        
+        }
 
         //private void AddOtherFieldNewControls(string FieldID, string FieldLabel, string ControlType, string ControlName)
         //{
@@ -1309,7 +1339,7 @@ namespace DCS_DataCapture
         //    lbl.Text = FieldLabel;
         //    lbl.ForeColor = Color.DimGray;
         //    gbOtherFields.Controls.Add(lbl);
-           
+
         //    switch (ControlType)
         //    {
         //        case "TextBox":
@@ -1355,7 +1385,7 @@ namespace DCS_DataCapture
         //            gbOtherFields.Controls.Add(rb);
         //            break;
         //    }
-            
+
 
         //    intLabelLastTop += intTextBoxTopVariable;
         //    intTextBoxLastTop += intTextBoxTopVariable;
@@ -1371,7 +1401,7 @@ namespace DCS_DataCapture
         private string ExcelConStr(string strExcelPath)
         {
             //return "Provider=Microsoft.Jet.OLEDB.4.0;Excel 8.0; Extended Properties=HDR=Yes; IMEX=1;Data Source=" + strExcelPath + "";
-            return "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + strExcelPath  + @"; Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            return "Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" + strExcelPath + @"; Extended Properties=""Excel 12.0 Xml;HDR=YES""";
         }
 
         //private bool SelectExcelSource(string strExcelPath, string strExcelSheet)
@@ -1411,7 +1441,7 @@ namespace DCS_DataCapture
         //    }
         //    ofd.Dispose();
         //    ofd = null;
-            
+
         //}
 
         //private void BindExcelData()
@@ -1535,10 +1565,10 @@ namespace DCS_DataCapture
         //}
 
         private void ResetForm()
-        {            
+        {
             cboAssociateType.SelectedIndex = 0;
             cboReplaceReason.SelectedIndex = 0;
-            txtCIF.Clear();            
+            txtCIF.Clear();
             txtFName.Clear();
             txtMName.Clear();
             txtLName.Clear();
@@ -1551,7 +1581,7 @@ namespace DCS_DataCapture
             cboMembershipType.SelectedIndex = 0;
             txtMobileNos.Clear();
             txtContactNos.Clear();
-            txtIDNumber.Clear();            
+            txtIDNumber.Clear();
             cboBranchIssue.SelectedIndex = 0;
             txtAddress1.Clear();
             txtAddress2.Clear();
@@ -1559,10 +1589,10 @@ namespace DCS_DataCapture
             txtCity.Clear();
             txtProvince.Clear();
             cboCountry.SelectedIndex = 0;
-            txtZipCode.Clear();            
-            txtFullName_Contact.Clear();                        
+            txtZipCode.Clear();
+            txtFullName_Contact.Clear();
             txtContactNos_Contact.Clear();
-            cboAssociateType.SelectedIndex = 0;            
+            cboAssociateType.SelectedIndex = 0;
             txtCIF_PrincipalMember.Clear();
             txtPrincipalName.Clear();
             txtCCANo.Clear();
@@ -1583,9 +1613,9 @@ namespace DCS_DataCapture
         //    frm.ShowDialog();
         //}
 
-        private enum IDType: short
+        private enum IDType : short
         {
-            Officer=1,
+            Officer = 1,
             EnlistedPersonnel,
             Cadet,
             CivilianEmployee,
@@ -1600,7 +1630,7 @@ namespace DCS_DataCapture
             DirectDependent_ReserveOfficer,
             DirectDependent_ReserveEnlistedPersonnel,
             LegalBeneficiary
-        }        
+        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -1610,8 +1640,8 @@ namespace DCS_DataCapture
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (!IsLocalValidation()) MessageBox.Show("not ok") ;
-        }      
+            if (!IsLocalValidation()) MessageBox.Show("not ok");
+        }
 
         private void cboPrintingType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1691,7 +1721,7 @@ namespace DCS_DataCapture
                     cboAssociateType.SelectedIndex = 0;
                     //txtCIF_PrincipalMember.Enabled = false;
                     //txtPrincipalName.Enabled = false;
-                }                
+                }
             }
             catch { }
         }
@@ -1714,7 +1744,7 @@ namespace DCS_DataCapture
             {
                 if (Convert.ToInt16(cboPrintingType.SelectedValue.ToString()) > 1) if (txtCIF.Text != "") BindData();
             }
-            else            
+            else
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) e.Handled = true;
         }
 
@@ -1723,12 +1753,12 @@ namespace DCS_DataCapture
             try
             {
                 if (Convert.ToInt32(cboAssociateType.SelectedValue) == 1)
-                {                    
+                {
                     txtCIF_PrincipalMember.Enabled = true;
                     txtPrincipalName.Enabled = true;
                 }
                 else
-                {                    
+                {
                     txtCIF_PrincipalMember.Enabled = false;
                     txtPrincipalName.Enabled = false;
                     txtCIF_PrincipalMember.Clear();
@@ -1741,25 +1771,25 @@ namespace DCS_DataCapture
         private void txtCIF_Leave(object sender, EventArgs e)
         {
             if (txtCIF.Text.Length != dcs_system_setting.cif_length)
-            {   
+            {
                 lblMsg.Text = "Please enter valid CIF...";
-                lblMsg.ForeColor = Color.OrangeRed; 
+                lblMsg.ForeColor = Color.OrangeRed;
             }
             else
             {
-                lblMsg.Text="";
+                lblMsg.Text = "";
             }
         }
-       
+
         private void btnReset_Click(object sender, EventArgs e)
-        {            
+        {
             //DCS_MemberInfo.Data.ResetMemberInfo();
             foreach (Control ctrl in groupBox1.Controls)
             {
                 if (ctrl is TextBox) ((TextBox)ctrl).Clear();
                 else if (ctrl is ComboBox)
                 {
-                    if(((ComboBox)ctrl).Items.Count>0)((ComboBox)ctrl).SelectedIndex = 0;
+                    if (((ComboBox)ctrl).Items.Count > 0) ((ComboBox)ctrl).SelectedIndex = 0;
                 }
             }
 
@@ -1820,8 +1850,8 @@ namespace DCS_DataCapture
 
         void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space || e.KeyChar == (char)'-');          
-            
+            e.Handled = !(char.IsLetter(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Space || e.KeyChar == (char)'-');
+
             //string senderName = ((TextBox)sender).Name;
 
             //switch(senderName)
@@ -1876,7 +1906,7 @@ namespace DCS_DataCapture
         {
             if (txtCIF.Text == "")
             {
-                Utilities.ShowWarningMessage("Please enter CIF to search.", "Data Capture System");
+                Utilities.ShowWarningMessage("Please enter CIF to search.");
                 txtCIF.Focus();
                 return;
             }
@@ -1888,7 +1918,7 @@ namespace DCS_DataCapture
         {
             if (txtReferenceNumber.Text == "")
             {
-                Utilities.ShowWarningMessage("Please enter reference number to search.", "Data Capture System");                
+                Utilities.ShowWarningMessage("Please enter reference number to search.");
                 txtReferenceNumber.Focus();
                 return;
             }

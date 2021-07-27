@@ -27,8 +27,8 @@ namespace DCS_DataCapture
                 txtMemTypeRegularAllwdYrs.Text = DataCapture.dcs_system_setting.member_type_reg_allow_yrs.ToString();
                 txtCardName_Length.Text = DataCapture.dcs_system_setting.cardname_length.ToString();
             }
-            txtServer.Text = Properties.Settings.Default.MiddleServerUrl;
-            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(Properties.Settings.Default.BranchIssue);
+            txtServer.Text = DataCapture.dcsDataCaptureConfig.middleServerUrl;
+            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(DataCapture.dcsDataCaptureConfig.branchIssue);
         }
 
         private void SaveSetting()
@@ -44,10 +44,9 @@ namespace DCS_DataCapture
 
             string url = txtServer.Text;
             if (url.Substring(url.Length - 1, 1) == "/") url = url.Substring(0, url.Length-2);
-            Properties.Settings.Default.BranchIssue = cboBranchIssue.Text;
-            Properties.Settings.Default.MiddleServerUrl = url;
-            Properties.Settings.Default.Save();
-            Properties.Settings.Default.Reload();
+            DataCapture.dcsDataCaptureConfig.branchIssue = cboBranchIssue.Text;
+            DataCapture.dcsDataCaptureConfig.middleServerUrl = url;
+            System.IO.File.WriteAllText(DataCapture.dcsDataCaptureConfigFile, Newtonsoft.Json.JsonConvert.SerializeObject(DataCapture.dcsDataCaptureConfig));
         }
 
         private void btnSave_Click(object sender, EventArgs e)

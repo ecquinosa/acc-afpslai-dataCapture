@@ -91,6 +91,7 @@
     <Compile Include="AddNewField.Designer.cs">
       <DependentUpon>AddNewField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\dcsDataCaptureConfig.cs" />
     <Compile Include="Class\Utilities.cs" />
     <Compile Include="DataCapture.cs">
       <SubType>UserControl</SubType>

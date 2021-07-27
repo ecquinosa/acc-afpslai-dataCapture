@@ -188,7 +188,7 @@ namespace DCS_DataCapture
         {
             if (txtValue.Text == "")
             {
-                Utilities.ShowWarningMessage("Please enter value", "Data Capture System");
+                Utilities.ShowWarningMessage("Please enter value");
                 txtValue.Focus();
                 return;
             }

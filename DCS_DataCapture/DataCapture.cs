@@ -836,6 +836,7 @@ namespace DCS_DataCapture
                 PopulateComboBox(MiddleServerApi.msApi.getCountry, ref cboCountry);
                 //PopulateCboCountry("tblCountry", "Country", "Country", ref cboCountry);
                 cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(dcsDataCaptureConfig.branchIssue);
+                txtBranchIssue.Text = dcsDataCaptureConfig.branchIssue;
                 cboCountry.SelectedIndex = cboCountry.FindStringExact("Philippines");
 
                 if (cboGender.Items.Count > 0) { cboGender.SelectedIndex = 0; }
@@ -853,7 +854,7 @@ namespace DCS_DataCapture
 
                 if (msa.dcsUser != null)
                 {
-                    if (msa.dcsUser.roleId == 2)
+                    if (msa.dcsUser.roleDesc == "DCS Admin")
                     {
                         linkLabel1.Visible = true;
                         lbManageTables.Visible = true;
@@ -1023,6 +1024,8 @@ namespace DCS_DataCapture
             {
                 if (obj.ToString().Length != 2)
                 {
+                    Utilities.ShowInformationMessage("Reference number is VALID");
+
                     var response = Newtonsoft.Json.JsonConvert.DeserializeObject<List<online_registration>>(obj.ToString());
                     var online_registration = response[0];
                     //txtReferenceNumber.Text = online_registration.reference_number;
@@ -1040,7 +1043,7 @@ namespace DCS_DataCapture
                 }
                 else
                 {
-                    Utilities.ShowWarningMessage("Reference number not found.");
+                    Utilities.ShowWarningMessage("Reference number is INVALID");
                     ResetForm();
                 }
             }
@@ -1081,6 +1084,7 @@ namespace DCS_DataCapture
                     if (!string.IsNullOrEmpty(cbsData.membershipStatus)) cboMembershipStatus.SelectedIndex = cboMembershipStatus.FindStringExact(cbsData.membershipStatus);
                     if (!string.IsNullOrEmpty(cbsData.membershipType)) cboMembershipType.SelectedIndex = cboMembershipType.FindStringExact(cbsData.membershipType);
                     if (!string.IsNullOrEmpty(cbsData.associateType)) cboAssociateType.SelectedIndex = cboAssociateType.FindStringExact(cbsData.associateType);
+                    if (!string.IsNullOrEmpty(cbsData.country)) cboCountry.SelectedIndex = cboCountry.FindStringExact(cbsData.country);
                 }
                 else
                 {
@@ -1707,23 +1711,23 @@ namespace DCS_DataCapture
 
         private void cboMembershipType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (Convert.ToInt32(cboMembershipType.SelectedValue) == 2)
-                {
-                    cboAssociateType.Enabled = true;
-                    //txtCIF_PrincipalMember.Enabled = true;
-                    //txtPrincipalName.Enabled = true;
-                }
-                else
-                {
-                    cboAssociateType.Enabled = false;
-                    cboAssociateType.SelectedIndex = 0;
-                    //txtCIF_PrincipalMember.Enabled = false;
-                    //txtPrincipalName.Enabled = false;
-                }
-            }
-            catch { }
+            //try
+            //{
+            //    if (Convert.ToInt32(cboMembershipType.SelectedValue) == 2)
+            //    {
+            //        cboAssociateType.Enabled = true;
+            //        //txtCIF_PrincipalMember.Enabled = true;
+            //        //txtPrincipalName.Enabled = true;
+            //    }
+            //    else
+            //    {
+            //        cboAssociateType.Enabled = false;
+            //        cboAssociateType.SelectedIndex = 0;
+            //        //txtCIF_PrincipalMember.Enabled = false;
+            //        //txtPrincipalName.Enabled = false;
+            //    }
+            //}
+            //catch { }
         }
 
         private void lbManageTables_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1924,6 +1928,11 @@ namespace DCS_DataCapture
             }
 
             GetOnlineRegistration();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

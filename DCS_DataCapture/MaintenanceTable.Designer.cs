@@ -42,6 +42,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
             this.lblOldCode = new System.Windows.Forms.Label();
+            this.txtParam3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,11 +201,32 @@
             this.lblOldCode.Text = "OldCode";
             this.lblOldCode.Visible = false;
             // 
+            // txtParam3
+            // 
+            this.txtParam3.Location = new System.Drawing.Point(454, 231);
+            this.txtParam3.Name = "txtParam3";
+            this.txtParam3.ReadOnly = true;
+            this.txtParam3.Size = new System.Drawing.Size(233, 23);
+            this.txtParam3.TabIndex = 14;
+            this.txtParam3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(455, 212);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 16);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Code";
+            this.label4.Visible = false;
+            // 
             // MaintenanceTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 449);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtParam3);
             this.Controls.Add(this.lblOldCode);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnDelete);
@@ -246,5 +269,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label lblOldCode;
+        private System.Windows.Forms.TextBox txtParam3;
+        private System.Windows.Forms.Label label4;
     }
 }

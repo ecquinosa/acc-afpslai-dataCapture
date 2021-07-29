@@ -40,9 +40,19 @@ namespace DCS_DataCapture
             switch (cboTable.Text.Trim())
             {
                 case "Branch":
-                    txtID.ReadOnly = false;
+                    //txtID.ReadOnly = false;
+                    label4.Visible = true;
+                    txtParam3.Visible = true;
+                    txtParam3.ReadOnly = false;
+                    btnSave.Location = new Point(454, 273);
+                    btnCancel.Location = new Point(535, 273);
                     break;
-                default:
+                default:                    
+                    label4.Visible = false;
+                    txtParam3.Visible = false;
+                    txtParam3.ReadOnly = true;
+                    btnSave.Location = new Point(454, 207);
+                    btnCancel.Location = new Point(535, 207);
                     break;
             }
         }
@@ -61,13 +71,23 @@ namespace DCS_DataCapture
                 switch (cboTable.Text.Trim())
                 {
                     case "Branch":
-                        lblOldCode.Text = grid.Rows[grid.CurrentRow.Index].Cells[0].Value.ToString().Trim();
-                        txtID.ReadOnly = false;
-                        label2.Text = "Code";
+                        //lblOldCode.Text = grid.Rows[grid.CurrentRow.Index].Cells[0].Value.ToString().Trim();
+                        //txtID.ReadOnly = false;
+                        label4.Visible = true;
+                        txtParam3.Visible = true;
+                        txtParam3.ReadOnly = false;
+                        txtParam3.Text = grid.Rows[grid.CurrentRow.Index].Cells[2].Value.ToString().Trim(); ;
+                        btnSave.Location = new Point(454, 273);
+                        btnCancel.Location = new Point(535, 273);
                         break;
                     default:
-                        txtID.ReadOnly = true;
-                        label2.Text = "ID";
+                        //txtID.ReadOnly = true;
+                        //label2.Text = "ID";
+                        txtParam3.Visible = false;
+                        txtParam3.ReadOnly = true;
+                        btnSave.Location = new Point(454, 207);
+                        btnCancel.Location = new Point(535, 207);
+
                         break;
                 }
                 btnAdd.Visible = false;
@@ -101,6 +121,8 @@ namespace DCS_DataCapture
             lblOldCode.Text = "";
             lblResult.Text = "Ready";
             lblResult.ForeColor = Color.Black;
+            label4.Visible = false;
+            txtParam3.Visible = false;
         }
 
         private void cboTable_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,6 +235,7 @@ namespace DCS_DataCapture
                         branch objBranch = new branch();
                         objBranch.id = Convert.ToInt32(txtID.Text);
                         objBranch.branchName = txtValue.Text;
+                        objBranch.code = txtParam3.Text;
                         if (DataCapture.msa.addDeleteGenericTable(objBranch))
                         {
                             BindGrid();

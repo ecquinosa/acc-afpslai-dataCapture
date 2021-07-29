@@ -128,6 +128,8 @@
             this.lblDuplicate = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.txtBranchIssue = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -173,13 +175,13 @@
             this.pnlMain.Controls.Add(this.lblDuplicate);
             this.pnlMain.Location = new System.Drawing.Point(3, 3);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(851, 514);
+            this.pnlMain.Size = new System.Drawing.Size(851, 529);
             this.pnlMain.TabIndex = 6;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(164, 475);
+            this.linkLabel1.Location = new System.Drawing.Point(164, 496);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(76, 16);
             this.linkLabel1.TabIndex = 533;
@@ -266,7 +268,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(8, 465);
+            this.btnReset.Location = new System.Drawing.Point(8, 486);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(82, 37);
             this.btnReset.TabIndex = 558;
@@ -277,7 +279,7 @@
             // lbManageTables
             // 
             this.lbManageTables.AutoSize = true;
-            this.lbManageTables.Location = new System.Drawing.Point(225, 475);
+            this.lbManageTables.Location = new System.Drawing.Point(225, 496);
             this.lbManageTables.Name = "lbManageTables";
             this.lbManageTables.Size = new System.Drawing.Size(122, 16);
             this.lbManageTables.TabIndex = 555;
@@ -412,7 +414,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(399, 275);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 130);
+            this.groupBox2.Size = new System.Drawing.Size(427, 145);
             this.groupBox2.TabIndex = 503;
             this.groupBox2.TabStop = false;
             // 
@@ -420,6 +422,7 @@
             // 
             this.cboAssociateType.BackColor = System.Drawing.Color.White;
             this.cboAssociateType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboAssociateType.Enabled = false;
             this.cboAssociateType.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAssociateType.FormattingEnabled = true;
             this.cboAssociateType.Location = new System.Drawing.Point(173, 15);
@@ -446,6 +449,7 @@
             this.txtPrincipalName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrincipalName.Location = new System.Drawing.Point(173, 72);
             this.txtPrincipalName.Name = "txtPrincipalName";
+            this.txtPrincipalName.ReadOnly = true;
             this.txtPrincipalName.Size = new System.Drawing.Size(235, 25);
             this.txtPrincipalName.TabIndex = 27;
             // 
@@ -490,6 +494,7 @@
             this.txtCIF_PrincipalMember.Location = new System.Drawing.Point(173, 44);
             this.txtCIF_PrincipalMember.MaxLength = 11;
             this.txtCIF_PrincipalMember.Name = "txtCIF_PrincipalMember";
+            this.txtCIF_PrincipalMember.ReadOnly = true;
             this.txtCIF_PrincipalMember.Size = new System.Drawing.Size(235, 25);
             this.txtCIF_PrincipalMember.TabIndex = 26;
             this.txtCIF_PrincipalMember.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCIF_PrincipalMember_KeyPress);
@@ -512,6 +517,7 @@
             this.txtCCANo.Location = new System.Drawing.Point(173, 97);
             this.txtCCANo.MaxLength = 14;
             this.txtCCANo.Name = "txtCCANo";
+            this.txtCCANo.ReadOnly = true;
             this.txtCCANo.Size = new System.Drawing.Size(235, 25);
             this.txtCCANo.TabIndex = 28;
             this.txtCCANo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCANo_KeyPress);
@@ -573,7 +579,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(399, 208);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 65);
+            this.groupBox1.Size = new System.Drawing.Size(427, 80);
             this.groupBox1.TabIndex = 502;
             this.groupBox1.TabStop = false;
             // 
@@ -606,6 +612,7 @@
             this.txtContactNos_Contact.Location = new System.Drawing.Point(173, 37);
             this.txtContactNos_Contact.MaxLength = 16;
             this.txtContactNos_Contact.Name = "txtContactNos_Contact";
+            this.txtContactNos_Contact.ReadOnly = true;
             this.txtContactNos_Contact.Size = new System.Drawing.Size(235, 25);
             this.txtContactNos_Contact.TabIndex = 24;
             this.txtContactNos_Contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNos_Contact_KeyPress);
@@ -638,6 +645,7 @@
             this.txtFullName_Contact.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName_Contact.Location = new System.Drawing.Point(173, 15);
             this.txtFullName_Contact.Name = "txtFullName_Contact";
+            this.txtFullName_Contact.ReadOnly = true;
             this.txtFullName_Contact.Size = new System.Drawing.Size(235, 25);
             this.txtFullName_Contact.TabIndex = 23;
             // 
@@ -656,6 +664,8 @@
             this.GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.GroupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.GroupBox4.Controls.Add(this.txtBranchIssue);
+            this.GroupBox4.Controls.Add(this.label10);
             this.GroupBox4.Controls.Add(this.lbSearchCIF);
             this.GroupBox4.Controls.Add(this.lbSearchRF);
             this.GroupBox4.Controls.Add(this.txtReferenceNumber);
@@ -695,7 +705,7 @@
             this.GroupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox4.Location = new System.Drawing.Point(6, 10);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(385, 446);
+            this.GroupBox4.Size = new System.Drawing.Size(385, 470);
             this.GroupBox4.TabIndex = 500;
             this.GroupBox4.TabStop = false;
             // 
@@ -703,7 +713,7 @@
             // 
             this.lbSearchCIF.AutoSize = true;
             this.lbSearchCIF.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSearchCIF.Location = new System.Drawing.Point(305, 83);
+            this.lbSearchCIF.Location = new System.Drawing.Point(305, 110);
             this.lbSearchCIF.Name = "lbSearchCIF";
             this.lbSearchCIF.Size = new System.Drawing.Size(64, 16);
             this.lbSearchCIF.TabIndex = 566;
@@ -715,7 +725,7 @@
             // 
             this.lbSearchRF.AutoSize = true;
             this.lbSearchRF.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSearchRF.Location = new System.Drawing.Point(305, 56);
+            this.lbSearchRF.Location = new System.Drawing.Point(305, 83);
             this.lbSearchRF.Name = "lbSearchRF";
             this.lbSearchRF.Size = new System.Drawing.Size(64, 16);
             this.lbSearchRF.TabIndex = 565;
@@ -726,7 +736,7 @@
             // txtReferenceNumber
             // 
             this.txtReferenceNumber.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReferenceNumber.Location = new System.Drawing.Point(152, 53);
+            this.txtReferenceNumber.Location = new System.Drawing.Point(152, 80);
             this.txtReferenceNumber.Name = "txtReferenceNumber";
             this.txtReferenceNumber.Size = new System.Drawing.Size(152, 25);
             this.txtReferenceNumber.TabIndex = 545;
@@ -735,7 +745,7 @@
             // 
             this.label40.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.DimGray;
-            this.label40.Location = new System.Drawing.Point(-1, 52);
+            this.label40.Location = new System.Drawing.Point(-1, 79);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(148, 24);
             this.label40.TabIndex = 546;
@@ -745,8 +755,9 @@
             // mtbMembershipDate
             // 
             this.mtbMembershipDate.CustomFormat = "dd/MM/yyyy";
+            this.mtbMembershipDate.Enabled = false;
             this.mtbMembershipDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.mtbMembershipDate.Location = new System.Drawing.Point(152, 269);
+            this.mtbMembershipDate.Location = new System.Drawing.Point(152, 296);
             this.mtbMembershipDate.Name = "mtbMembershipDate";
             this.mtbMembershipDate.Size = new System.Drawing.Size(152, 26);
             this.mtbMembershipDate.TabIndex = 10;
@@ -754,8 +765,9 @@
             // mtbDateOfBirth
             // 
             this.mtbDateOfBirth.CustomFormat = "dd/MM/yyyy";
+            this.mtbDateOfBirth.Enabled = false;
             this.mtbDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.mtbDateOfBirth.Location = new System.Drawing.Point(152, 351);
+            this.mtbDateOfBirth.Location = new System.Drawing.Point(152, 378);
             this.mtbDateOfBirth.Name = "mtbDateOfBirth";
             this.mtbDateOfBirth.Size = new System.Drawing.Size(152, 26);
             this.mtbDateOfBirth.TabIndex = 13;
@@ -764,7 +776,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(305, 276);
+            this.label4.Location = new System.Drawing.Point(305, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 14);
             this.label4.TabIndex = 544;
@@ -777,7 +789,7 @@
             this.cboReplaceReason.Enabled = false;
             this.cboReplaceReason.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboReplaceReason.FormattingEnabled = true;
-            this.cboReplaceReason.Location = new System.Drawing.Point(245, 25);
+            this.cboReplaceReason.Location = new System.Drawing.Point(245, 52);
             this.cboReplaceReason.Name = "cboReplaceReason";
             this.cboReplaceReason.Size = new System.Drawing.Size(105, 25);
             this.cboReplaceReason.TabIndex = 2;
@@ -786,7 +798,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DimGray;
-            this.label19.Location = new System.Drawing.Point(4, 326);
+            this.label19.Location = new System.Drawing.Point(4, 353);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(143, 18);
             this.label19.TabIndex = 542;
@@ -797,9 +809,10 @@
             // 
             this.txtContactNos.BackColor = System.Drawing.Color.White;
             this.txtContactNos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactNos.Location = new System.Drawing.Point(152, 379);
+            this.txtContactNos.Location = new System.Drawing.Point(152, 406);
             this.txtContactNos.MaxLength = 16;
             this.txtContactNos.Name = "txtContactNos";
+            this.txtContactNos.ReadOnly = true;
             this.txtContactNos.Size = new System.Drawing.Size(198, 25);
             this.txtContactNos.TabIndex = 14;
             this.txtContactNos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContactNos_KeyPress);
@@ -808,9 +821,10 @@
             // 
             this.cboMembershipType.BackColor = System.Drawing.Color.White;
             this.cboMembershipType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMembershipType.Enabled = false;
             this.cboMembershipType.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMembershipType.FormattingEnabled = true;
-            this.cboMembershipType.Location = new System.Drawing.Point(152, 324);
+            this.cboMembershipType.Location = new System.Drawing.Point(152, 351);
             this.cboMembershipType.Name = "cboMembershipType";
             this.cboMembershipType.Size = new System.Drawing.Size(198, 25);
             this.cboMembershipType.TabIndex = 12;
@@ -820,7 +834,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(4, 381);
+            this.label5.Location = new System.Drawing.Point(4, 408);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 18);
             this.label5.TabIndex = 183;
@@ -831,7 +845,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(4, 408);
+            this.label6.Location = new System.Drawing.Point(4, 435);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 18);
             this.label6.TabIndex = 148;
@@ -842,7 +856,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(-6, 299);
+            this.label12.Location = new System.Drawing.Point(-6, 326);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(153, 18);
             this.label12.TabIndex = 539;
@@ -853,8 +867,9 @@
             // 
             this.txtMobileNos.BackColor = System.Drawing.Color.White;
             this.txtMobileNos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobileNos.Location = new System.Drawing.Point(152, 406);
+            this.txtMobileNos.Location = new System.Drawing.Point(152, 433);
             this.txtMobileNos.Name = "txtMobileNos";
+            this.txtMobileNos.ReadOnly = true;
             this.txtMobileNos.Size = new System.Drawing.Size(198, 25);
             this.txtMobileNos.TabIndex = 15;
             this.txtMobileNos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobileNos_KeyPress);
@@ -863,7 +878,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(4, 270);
+            this.label8.Location = new System.Drawing.Point(4, 297);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 18);
             this.label8.TabIndex = 537;
@@ -874,9 +889,10 @@
             // 
             this.cboMembershipStatus.BackColor = System.Drawing.Color.White;
             this.cboMembershipStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMembershipStatus.Enabled = false;
             this.cboMembershipStatus.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMembershipStatus.FormattingEnabled = true;
-            this.cboMembershipStatus.Location = new System.Drawing.Point(152, 297);
+            this.cboMembershipStatus.Location = new System.Drawing.Point(152, 324);
             this.cboMembershipStatus.Name = "cboMembershipStatus";
             this.cboMembershipStatus.Size = new System.Drawing.Size(152, 25);
             this.cboMembershipStatus.TabIndex = 11;
@@ -885,9 +901,10 @@
             // 
             this.cboMaritalStatus.BackColor = System.Drawing.Color.White;
             this.cboMaritalStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMaritalStatus.Enabled = false;
             this.cboMaritalStatus.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMaritalStatus.FormattingEnabled = true;
-            this.cboMaritalStatus.Location = new System.Drawing.Point(152, 242);
+            this.cboMaritalStatus.Location = new System.Drawing.Point(152, 269);
             this.cboMaritalStatus.Name = "cboMaritalStatus";
             this.cboMaritalStatus.Size = new System.Drawing.Size(152, 25);
             this.cboMaritalStatus.TabIndex = 9;
@@ -896,7 +913,7 @@
             // 
             this.lblReligion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReligion.ForeColor = System.Drawing.Color.DimGray;
-            this.lblReligion.Location = new System.Drawing.Point(4, 244);
+            this.lblReligion.Location = new System.Drawing.Point(4, 271);
             this.lblReligion.Name = "lblReligion";
             this.lblReligion.Size = new System.Drawing.Size(143, 18);
             this.lblReligion.TabIndex = 210;
@@ -909,7 +926,7 @@
             this.cboPrintingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPrintingType.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPrintingType.FormattingEnabled = true;
-            this.cboPrintingType.Location = new System.Drawing.Point(152, 25);
+            this.cboPrintingType.Location = new System.Drawing.Point(152, 52);
             this.cboPrintingType.Name = "cboPrintingType";
             this.cboPrintingType.Size = new System.Drawing.Size(87, 25);
             this.cboPrintingType.TabIndex = 1;
@@ -919,7 +936,7 @@
             // 
             this.label30.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.DimGray;
-            this.label30.Location = new System.Drawing.Point(4, 27);
+            this.label30.Location = new System.Drawing.Point(4, 54);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(143, 18);
             this.label30.TabIndex = 189;
@@ -930,7 +947,7 @@
             // 
             this.Label16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.ForeColor = System.Drawing.Color.DimGray;
-            this.Label16.Location = new System.Drawing.Point(4, 354);
+            this.Label16.Location = new System.Drawing.Point(4, 381);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(143, 18);
             this.Label16.TabIndex = 50;
@@ -941,7 +958,7 @@
             // 
             this.Label21.AutoSize = true;
             this.Label21.Font = new System.Drawing.Font("Arial", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label21.Location = new System.Drawing.Point(307, 358);
+            this.Label21.Location = new System.Drawing.Point(307, 385);
             this.Label21.Name = "Label21";
             this.Label21.Size = new System.Drawing.Size(75, 14);
             this.Label21.TabIndex = 160;
@@ -951,8 +968,9 @@
             // 
             this.txtMName.BackColor = System.Drawing.Color.White;
             this.txtMName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMName.Location = new System.Drawing.Point(152, 134);
+            this.txtMName.Location = new System.Drawing.Point(152, 161);
             this.txtMName.Name = "txtMName";
+            this.txtMName.ReadOnly = true;
             this.txtMName.Size = new System.Drawing.Size(198, 25);
             this.txtMName.TabIndex = 5;
             // 
@@ -960,7 +978,7 @@
             // 
             this.label28.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.DimGray;
-            this.label28.Location = new System.Drawing.Point(4, 136);
+            this.label28.Location = new System.Drawing.Point(4, 163);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(143, 18);
             this.label28.TabIndex = 188;
@@ -971,8 +989,9 @@
             // 
             this.txtLName.BackColor = System.Drawing.Color.White;
             this.txtLName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLName.Location = new System.Drawing.Point(152, 161);
+            this.txtLName.Location = new System.Drawing.Point(152, 188);
             this.txtLName.Name = "txtLName";
+            this.txtLName.ReadOnly = true;
             this.txtLName.Size = new System.Drawing.Size(198, 25);
             this.txtLName.TabIndex = 6;
             // 
@@ -980,7 +999,7 @@
             // 
             this.label27.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.DimGray;
-            this.label27.Location = new System.Drawing.Point(4, 163);
+            this.label27.Location = new System.Drawing.Point(4, 190);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(143, 18);
             this.label27.TabIndex = 186;
@@ -991,8 +1010,9 @@
             // 
             this.txtSuffix.BackColor = System.Drawing.Color.White;
             this.txtSuffix.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuffix.Location = new System.Drawing.Point(152, 188);
+            this.txtSuffix.Location = new System.Drawing.Point(152, 215);
             this.txtSuffix.Name = "txtSuffix";
+            this.txtSuffix.ReadOnly = true;
             this.txtSuffix.Size = new System.Drawing.Size(198, 25);
             this.txtSuffix.TabIndex = 7;
             // 
@@ -1000,7 +1020,7 @@
             // 
             this.label26.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DimGray;
-            this.label26.Location = new System.Drawing.Point(4, 188);
+            this.label26.Location = new System.Drawing.Point(4, 215);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(143, 18);
             this.label26.TabIndex = 184;
@@ -1021,7 +1041,7 @@
             // txtCIF
             // 
             this.txtCIF.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCIF.Location = new System.Drawing.Point(152, 80);
+            this.txtCIF.Location = new System.Drawing.Point(152, 107);
             this.txtCIF.Name = "txtCIF";
             this.txtCIF.Size = new System.Drawing.Size(152, 25);
             this.txtCIF.TabIndex = 3;
@@ -1031,8 +1051,9 @@
             // 
             this.txtFName.BackColor = System.Drawing.Color.White;
             this.txtFName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFName.Location = new System.Drawing.Point(152, 107);
+            this.txtFName.Location = new System.Drawing.Point(152, 134);
             this.txtFName.Name = "txtFName";
+            this.txtFName.ReadOnly = true;
             this.txtFName.Size = new System.Drawing.Size(198, 25);
             this.txtFName.TabIndex = 4;
             // 
@@ -1040,7 +1061,7 @@
             // 
             this.lblIDNumber.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDNumber.ForeColor = System.Drawing.Color.DimGray;
-            this.lblIDNumber.Location = new System.Drawing.Point(4, 83);
+            this.lblIDNumber.Location = new System.Drawing.Point(4, 110);
             this.lblIDNumber.Name = "lblIDNumber";
             this.lblIDNumber.Size = new System.Drawing.Size(143, 18);
             this.lblIDNumber.TabIndex = 3;
@@ -1051,7 +1072,7 @@
             // 
             this.Label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.ForeColor = System.Drawing.Color.DimGray;
-            this.Label11.Location = new System.Drawing.Point(4, 108);
+            this.Label11.Location = new System.Drawing.Point(4, 135);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(143, 18);
             this.Label11.TabIndex = 3;
@@ -1062,13 +1083,14 @@
             // 
             this.cboGender.BackColor = System.Drawing.Color.White;
             this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGender.Enabled = false;
             this.cboGender.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGender.FormattingEnabled = true;
             this.cboGender.Items.AddRange(new object[] {
             "-Select-",
             "MALE",
             "FEMALE"});
-            this.cboGender.Location = new System.Drawing.Point(152, 215);
+            this.cboGender.Location = new System.Drawing.Point(152, 242);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(152, 25);
             this.cboGender.TabIndex = 8;
@@ -1077,7 +1099,7 @@
             // 
             this.Label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label15.ForeColor = System.Drawing.Color.DimGray;
-            this.Label15.Location = new System.Drawing.Point(4, 215);
+            this.Label15.Location = new System.Drawing.Point(4, 242);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(143, 18);
             this.Label15.TabIndex = 3;
@@ -1106,7 +1128,7 @@
             this.GroupBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(399, 10);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(427, 194);
+            this.GroupBox3.Size = new System.Drawing.Size(427, 209);
             this.GroupBox3.TabIndex = 501;
             this.GroupBox3.TabStop = false;
             // 
@@ -1114,6 +1136,7 @@
             // 
             this.cboCountry.BackColor = System.Drawing.Color.White;
             this.cboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCountry.Enabled = false;
             this.cboCountry.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCountry.FormattingEnabled = true;
             this.cboCountry.Location = new System.Drawing.Point(173, 141);
@@ -1138,6 +1161,7 @@
             this.txtProvince.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProvince.Location = new System.Drawing.Point(173, 119);
             this.txtProvince.Name = "txtProvince";
+            this.txtProvince.ReadOnly = true;
             this.txtProvince.Size = new System.Drawing.Size(235, 25);
             this.txtProvince.TabIndex = 20;
             // 
@@ -1169,6 +1193,7 @@
             this.txtCity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(173, 96);
             this.txtCity.Name = "txtCity";
+            this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(235, 25);
             this.txtCity.TabIndex = 19;
             // 
@@ -1178,6 +1203,7 @@
             this.txtZipCode.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtZipCode.Location = new System.Drawing.Point(173, 165);
             this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.ReadOnly = true;
             this.txtZipCode.Size = new System.Drawing.Size(91, 25);
             this.txtZipCode.TabIndex = 22;
             this.txtZipCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZipCode_KeyPress);
@@ -1211,6 +1237,7 @@
             this.txtAddress2.Location = new System.Drawing.Point(173, 50);
             this.txtAddress2.MaxLength = 50;
             this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.ReadOnly = true;
             this.txtAddress2.Size = new System.Drawing.Size(235, 25);
             this.txtAddress2.TabIndex = 17;
             // 
@@ -1243,6 +1270,7 @@
             this.txtAddress1.Location = new System.Drawing.Point(173, 27);
             this.txtAddress1.MaxLength = 100;
             this.txtAddress1.Name = "txtAddress1";
+            this.txtAddress1.ReadOnly = true;
             this.txtAddress1.Size = new System.Drawing.Size(235, 25);
             this.txtAddress1.TabIndex = 16;
             // 
@@ -1253,6 +1281,7 @@
             this.txtAddress3.Location = new System.Drawing.Point(173, 73);
             this.txtAddress3.MaxLength = 50;
             this.txtAddress3.Name = "txtAddress3";
+            this.txtAddress3.ReadOnly = true;
             this.txtAddress3.Size = new System.Drawing.Size(235, 25);
             this.txtAddress3.TabIndex = 18;
             // 
@@ -1272,7 +1301,7 @@
             this.lblDuplicate.AutoSize = true;
             this.lblDuplicate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuplicate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDuplicate.Location = new System.Drawing.Point(96, 475);
+            this.lblDuplicate.Location = new System.Drawing.Point(96, 496);
             this.lblDuplicate.Name = "lblDuplicate";
             this.lblDuplicate.Size = new System.Drawing.Size(74, 16);
             this.lblDuplicate.TabIndex = 182;
@@ -1283,6 +1312,28 @@
             // 
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
+            // 
+            // txtBranchIssue
+            // 
+            this.txtBranchIssue.BackColor = System.Drawing.Color.White;
+            this.txtBranchIssue.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBranchIssue.Location = new System.Drawing.Point(152, 24);
+            this.txtBranchIssue.Name = "txtBranchIssue";
+            this.txtBranchIssue.ReadOnly = true;
+            this.txtBranchIssue.Size = new System.Drawing.Size(198, 25);
+            this.txtBranchIssue.TabIndex = 567;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(-1, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 24);
+            this.label10.TabIndex = 568;
+            this.label10.Text = "Branch Issue:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // DataCapture
             // 
@@ -1414,5 +1465,7 @@
         internal System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel lbSearchCIF;
         private System.Windows.Forms.LinkLabel lbSearchRF;
+        internal System.Windows.Forms.TextBox txtBranchIssue;
+        internal System.Windows.Forms.Label label10;
     }
 }

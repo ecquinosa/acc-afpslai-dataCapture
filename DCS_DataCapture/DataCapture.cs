@@ -1052,7 +1052,7 @@ namespace DCS_DataCapture
         private void GetCBSData()
         {
             object obj = null;
-            if (msa.GetTable(MiddleServerApi.msApi.pullCBSData, ref obj, "{ 'cif': '" + txtCIF.Text + "' }"))
+            if (msa.GetTable(MiddleServerApi.msApi.pullCBSData, ref obj, "{ 'cif': '" + txtCIF.Text + "','branchCode': '" + cboBranchIssue.SelectedValue.ToString() + "' }"))
             {
                 var cbsData = Newtonsoft.Json.JsonConvert.DeserializeObject<cbsData>(obj.ToString());
 
@@ -1830,6 +1830,9 @@ namespace DCS_DataCapture
             cboPrintingType.Focus();
 
             if (cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
+
+            cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(dcsDataCaptureConfig.branchIssue);
+            txtBranchIssue.Text = dcsDataCaptureConfig.branchIssue;
         }
 
         private void txtMobileNos_KeyPress(object sender, KeyPressEventArgs e)

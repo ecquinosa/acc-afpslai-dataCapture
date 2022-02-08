@@ -238,3 +238,6 @@ C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\All
 C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\DCS_MemberInfo.pdb
 C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\Newtonsoft.Json.xml
 C:\Drive D\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\obj\Debug\DCS_DataCapture.csproj.CopyComplete
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\System.Net.Http.Formatting.dll
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\accAfpslaiEmvObjct.dll.config
+D:\WORK\Projects\DCS_DataCapture\acc-afpslai-dataCapture\DCS_DataCapture\bin\Debug\System.Net.Http.Formatting.xml

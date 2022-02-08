@@ -73,6 +73,8 @@
             this.txtFullName_Contact = new System.Windows.Forms.TextBox();
             this.picPersonalDetails = new System.Windows.Forms.PictureBox();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtBranchIssue = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.lbSearchCIF = new System.Windows.Forms.LinkLabel();
             this.lbSearchRF = new System.Windows.Forms.LinkLabel();
             this.txtReferenceNumber = new System.Windows.Forms.TextBox();
@@ -128,8 +130,6 @@
             this.lblDuplicate = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.txtBranchIssue = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -183,7 +183,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(164, 496);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(76, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(75, 16);
             this.linkLabel1.TabIndex = 533;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "SETTINGS";
@@ -194,7 +194,7 @@
             // 
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.txtCardName);
-            this.groupBox5.Location = new System.Drawing.Point(399, 406);
+            this.groupBox5.Location = new System.Drawing.Point(399, 422);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(427, 50);
             this.groupBox5.TabIndex = 564;
@@ -281,7 +281,7 @@
             this.lbManageTables.AutoSize = true;
             this.lbManageTables.Location = new System.Drawing.Point(225, 496);
             this.lbManageTables.Name = "lbManageTables";
-            this.lbManageTables.Size = new System.Drawing.Size(122, 16);
+            this.lbManageTables.Size = new System.Drawing.Size(121, 16);
             this.lbManageTables.TabIndex = 555;
             this.lbManageTables.TabStop = true;
             this.lbManageTables.Text = "MANAGE TABLES";
@@ -293,7 +293,7 @@
             this.lbManageRecords.AutoSize = true;
             this.lbManageRecords.Location = new System.Drawing.Point(726, 0);
             this.lbManageRecords.Name = "lbManageRecords";
-            this.lbManageRecords.Size = new System.Drawing.Size(116, 16);
+            this.lbManageRecords.Size = new System.Drawing.Size(115, 16);
             this.lbManageRecords.TabIndex = 556;
             this.lbManageRecords.TabStop = true;
             this.lbManageRecords.Text = "Manage Records";
@@ -412,9 +412,9 @@
             this.groupBox2.Controls.Add(this.txtCCANo);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(399, 275);
+            this.groupBox2.Location = new System.Drawing.Point(399, 288);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 145);
+            this.groupBox2.Size = new System.Drawing.Size(427, 127);
             this.groupBox2.TabIndex = 503;
             this.groupBox2.TabStop = false;
             // 
@@ -577,9 +577,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFullName_Contact);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(399, 208);
+            this.groupBox1.Location = new System.Drawing.Point(399, 216);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 80);
+            this.groupBox1.Size = new System.Drawing.Size(427, 69);
             this.groupBox1.TabIndex = 502;
             this.groupBox1.TabStop = false;
             // 
@@ -709,13 +709,35 @@
             this.GroupBox4.TabIndex = 500;
             this.GroupBox4.TabStop = false;
             // 
+            // txtBranchIssue
+            // 
+            this.txtBranchIssue.BackColor = System.Drawing.Color.White;
+            this.txtBranchIssue.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBranchIssue.Location = new System.Drawing.Point(152, 24);
+            this.txtBranchIssue.Name = "txtBranchIssue";
+            this.txtBranchIssue.ReadOnly = true;
+            this.txtBranchIssue.Size = new System.Drawing.Size(198, 25);
+            this.txtBranchIssue.TabIndex = 567;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(-1, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 24);
+            this.label10.TabIndex = 568;
+            this.label10.Text = "Branch Issue:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // lbSearchCIF
             // 
             this.lbSearchCIF.AutoSize = true;
             this.lbSearchCIF.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSearchCIF.Location = new System.Drawing.Point(305, 110);
             this.lbSearchCIF.Name = "lbSearchCIF";
-            this.lbSearchCIF.Size = new System.Drawing.Size(64, 16);
+            this.lbSearchCIF.Size = new System.Drawing.Size(63, 16);
             this.lbSearchCIF.TabIndex = 566;
             this.lbSearchCIF.TabStop = true;
             this.lbSearchCIF.Text = "SEARCH";
@@ -727,7 +749,7 @@
             this.lbSearchRF.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSearchRF.Location = new System.Drawing.Point(305, 83);
             this.lbSearchRF.Name = "lbSearchRF";
-            this.lbSearchRF.Size = new System.Drawing.Size(64, 16);
+            this.lbSearchRF.Size = new System.Drawing.Size(63, 16);
             this.lbSearchRF.TabIndex = 565;
             this.lbSearchRF.TabStop = true;
             this.lbSearchRF.Text = "SEARCH";
@@ -1128,7 +1150,7 @@
             this.GroupBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(399, 10);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(427, 209);
+            this.GroupBox3.Size = new System.Drawing.Size(427, 200);
             this.GroupBox3.TabIndex = 501;
             this.GroupBox3.TabStop = false;
             // 
@@ -1303,7 +1325,7 @@
             this.lblDuplicate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblDuplicate.Location = new System.Drawing.Point(96, 496);
             this.lblDuplicate.Name = "lblDuplicate";
-            this.lblDuplicate.Size = new System.Drawing.Size(74, 16);
+            this.lblDuplicate.Size = new System.Drawing.Size(73, 16);
             this.lblDuplicate.TabIndex = 182;
             this.lblDuplicate.Text = "Duplicate";
             this.lblDuplicate.Visible = false;
@@ -1312,28 +1334,6 @@
             // 
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
-            // 
-            // txtBranchIssue
-            // 
-            this.txtBranchIssue.BackColor = System.Drawing.Color.White;
-            this.txtBranchIssue.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBranchIssue.Location = new System.Drawing.Point(152, 24);
-            this.txtBranchIssue.Name = "txtBranchIssue";
-            this.txtBranchIssue.ReadOnly = true;
-            this.txtBranchIssue.Size = new System.Drawing.Size(198, 25);
-            this.txtBranchIssue.TabIndex = 567;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(-1, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 24);
-            this.label10.TabIndex = 568;
-            this.label10.Text = "Branch Issue:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // DataCapture
             // 

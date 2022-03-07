@@ -597,9 +597,17 @@ namespace DCS_DataCapture
                 }
                 else if (txtMobileNos.Text != "")
                 {
-                    if (txtMobileNos.Text.Length != 11)
+                    //if (txtMobileNos.Text.Length != 11)
+                    //{
+                    //    _ErrorMessage = string.Format("Please enter valid 11 characters mobile number");
+                    //    errorProvider1.SetError(txtMobileNos, _ErrorMessage);
+                    //    bln = false;
+                    //}
+                    if (txtMobileNos.Text.Length == 12) { }
+                    else if (txtMobileNos.Text.Length == 11) { }
+                    else
                     {
-                        _ErrorMessage = string.Format("Please enter valid 11 characters mobile number");
+                        _ErrorMessage = string.Format("Please enter valid characters mobile number");
                         errorProvider1.SetError(txtMobileNos, _ErrorMessage);
                         bln = false;
                     }
@@ -1079,12 +1087,16 @@ namespace DCS_DataCapture
                     txtCIF_PrincipalMember.Text = cbsData.principal_cif;
                     txtCCANo.Text = cbsData.cca_no;
 
-                    if (!string.IsNullOrEmpty(cbsData.gender)) if (cbsData.gender.Substring(0, 1) == "M") cboGender.SelectedIndex = 1; else cboGender.SelectedIndex = 2;
-                    if (!string.IsNullOrEmpty(cbsData.civilStatus)) cboMaritalStatus.SelectedIndex = cboMaritalStatus.FindStringExact(cbsData.civilStatus);
-                    if (!string.IsNullOrEmpty(cbsData.membershipStatus)) cboMembershipStatus.SelectedIndex = cboMembershipStatus.FindStringExact(cbsData.membershipStatus);
-                    if (!string.IsNullOrEmpty(cbsData.membershipType)) cboMembershipType.SelectedIndex = cboMembershipType.FindStringExact(cbsData.membershipType);
-                    if (!string.IsNullOrEmpty(cbsData.associateType)) cboAssociateType.SelectedIndex = cboAssociateType.FindStringExact(cbsData.associateType);
-                    if (!string.IsNullOrEmpty(cbsData.country)) cboCountry.SelectedIndex = cboCountry.FindStringExact(cbsData.country);
+                    if (!string.IsNullOrEmpty(cbsData.gender)) 
+                    {
+                        if (cbsData.gender.Substring(0, 1) == "M") cboGender.SelectedIndex = 1; else cboGender.SelectedIndex = 2;
+                    } else cboGender.SelectedIndex = 0;
+
+                    if (!string.IsNullOrEmpty(cbsData.civilStatus)) cboMaritalStatus.SelectedIndex = cboMaritalStatus.FindStringExact(cbsData.civilStatus); else cboMaritalStatus.SelectedIndex = 0;
+                    if (!string.IsNullOrEmpty(cbsData.membershipStatus)) cboMembershipStatus.SelectedIndex = cboMembershipStatus.FindStringExact(cbsData.membershipStatus); else cboMembershipStatus.SelectedIndex = 0;
+                    if (!string.IsNullOrEmpty(cbsData.membershipType)) cboMembershipType.SelectedIndex = cboMembershipType.FindStringExact(cbsData.membershipType); else cboMembershipType.SelectedIndex = 0;
+                    if (!string.IsNullOrEmpty(cbsData.associateType)) cboAssociateType.SelectedIndex = cboAssociateType.FindStringExact(cbsData.associateType); else cboAssociateType.SelectedIndex = 0;
+                    if (!string.IsNullOrEmpty(cbsData.country)) cboCountry.SelectedIndex = cboCountry.FindStringExact(cbsData.country); else cboCountry.SelectedIndex = 0;
                 }
                 else
                 {

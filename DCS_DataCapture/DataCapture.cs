@@ -288,8 +288,8 @@ namespace DCS_DataCapture
             member.gender = cboGender.Text;
             member.date_birth = mtbDateOfBirth.Value.Date;
             if (cboMaritalStatus.SelectedIndex > 0) member.civil_status_id = (int)cboMaritalStatus.SelectedValue;
-            if (cboMembershipStatus.SelectedIndex > 0) member.membership_type_id = (int)cboMembershipStatus.SelectedValue;
-            if (cboMembershipType.SelectedIndex > 0) member.membership_status_id = (int)cboMembershipType.SelectedValue;
+            if (cboMembershipStatus.SelectedIndex > 0) member.membership_status_id = (int)cboMembershipStatus.SelectedValue;
+            if (cboMembershipType.SelectedIndex > 0) member.membership_type_id = (int)cboMembershipType.SelectedValue;
             if (cboPrintingType.SelectedIndex > 0) member.print_type_id = (int)cboPrintingType.SelectedValue;
             if (cboReplaceReason.SelectedIndex > 0) member.recard_reason_id = (int)cboReplaceReason.SelectedValue;
             member.membership_date = mtbMembershipDate.Value.Date;
@@ -297,7 +297,7 @@ namespace DCS_DataCapture
             member.mobile_nos = txtMobileNos.Text;
             member.emergency_contact_name = txtFullName_Contact.Text;
             member.emergency_contact_nos = txtContactNos_Contact.Text;
-            if (cboMaritalStatus.SelectedIndex > 0) member.principal_associate_type_id = (int)cboAssociateType.SelectedValue;
+            if (cboAssociateType.SelectedIndex > 0) member.principal_associate_type_id = (int)cboAssociateType.SelectedValue;
             member.principal_cif = txtCIF_PrincipalMember.Text;
             member.principal_name = txtPrincipalName.Text;
             member.cca_no = txtCCANo.Text;
@@ -805,7 +805,7 @@ namespace DCS_DataCapture
 
         public void CloseDataCapture()
         {
-
+            msa.userLogOut(new system_user() { id = msa.dcsUser.userId, user_name = msa.dcsUser.userName });
         }
 
 
@@ -853,16 +853,20 @@ namespace DCS_DataCapture
                 lblVoidReason.Text = "";
                 lblRefDataID.Text = "";
 
-                cboPrintingType.Select();
-                cboPrintingType.Focus();
+                //cboPrintingType.Select();
+                //cboPrintingType.Focus();
+                if (cboPrintingType.Items.Count > 0) { 
+                    cboPrintingType.SelectedIndex = 1;
+                    cboPrintingType.Enabled = false;
+                }
 
-                if (cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
+                if (cboMembershipStatus.Items.Count > 0) cboMembershipStatus.SelectedIndex = 0;
 
                 GetDCSSystemSettings();
 
                 if (msa.dcsUser != null)
                 {
-                    if (msa.dcsUser.roleDesc == "DCS Admin")
+                    if (msa.dcsUser.roleId == 2)
                     {
                         linkLabel1.Visible = true;
                         lbManageTables.Visible = true;
@@ -1611,9 +1615,10 @@ namespace DCS_DataCapture
             cboAssociateType.SelectedIndex = 0;
             txtCIF_PrincipalMember.Clear();
             txtPrincipalName.Clear();
-            txtCCANo.Clear();
+            txtCCANo.Clear();            
 
             email = "";
+            errorProvider1.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -1834,17 +1839,27 @@ namespace DCS_DataCapture
 
             if (cboGender.Items.Count > 0) { cboGender.SelectedIndex = 0; }
 
+            txtCardName.Clear();
+
             lblSupervisor.Text = "";
             lblVoidReason.Text = "";
             lblRefDataID.Text = "";
 
-            cboPrintingType.Select();
-            cboPrintingType.Focus();
+            //cboPrintingType.Select();
+            //cboPrintingType.Focus();
+            if (cboPrintingType.Items.Count > 0)
+            {
+                cboPrintingType.SelectedIndex = 1;
+                cboPrintingType.Enabled = false;
+            }
 
-            if (cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
+            //if (cboMembershipStatus.Items.Count > 3) cboMembershipStatus.SelectedIndex = 3;
+            if (cboMembershipStatus.Items.Count > 0) cboMembershipStatus.SelectedIndex = 0;
 
             cboBranchIssue.SelectedIndex = cboBranchIssue.FindStringExact(dcsDataCaptureConfig.branchIssue);
             txtBranchIssue.Text = dcsDataCaptureConfig.branchIssue;
+
+            errorProvider1.Clear();
         }
 
         private void txtMobileNos_KeyPress(object sender, KeyPressEventArgs e)

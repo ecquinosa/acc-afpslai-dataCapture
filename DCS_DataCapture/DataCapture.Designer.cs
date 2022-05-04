@@ -33,6 +33,7 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCardName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,6 +74,8 @@
             this.txtFullName_Contact = new System.Windows.Forms.TextBox();
             this.picPersonalDetails = new System.Windows.Forms.PictureBox();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.txtBranchIssue = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.lbSearchCIF = new System.Windows.Forms.LinkLabel();
@@ -175,13 +178,13 @@
             this.pnlMain.Controls.Add(this.lblDuplicate);
             this.pnlMain.Location = new System.Drawing.Point(3, 3);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(851, 529);
+            this.pnlMain.Size = new System.Drawing.Size(851, 533);
             this.pnlMain.TabIndex = 6;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(164, 496);
+            this.linkLabel1.Location = new System.Drawing.Point(168, 496);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(75, 16);
             this.linkLabel1.TabIndex = 533;
@@ -192,13 +195,24 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.txtCardName);
-            this.groupBox5.Location = new System.Drawing.Point(399, 422);
+            this.groupBox5.Location = new System.Drawing.Point(399, 431);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(427, 50);
+            this.groupBox5.Size = new System.Drawing.Size(427, 49);
             this.groupBox5.TabIndex = 564;
             this.groupBox5.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label18.Location = new System.Drawing.Point(408, 17);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(18, 22);
+            this.label18.TabIndex = 565;
+            this.label18.Text = "* ";
             // 
             // label9
             // 
@@ -268,7 +282,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(8, 486);
+            this.btnReset.Location = new System.Drawing.Point(8, 490);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(82, 37);
             this.btnReset.TabIndex = 558;
@@ -279,7 +293,7 @@
             // lbManageTables
             // 
             this.lbManageTables.AutoSize = true;
-            this.lbManageTables.Location = new System.Drawing.Point(225, 496);
+            this.lbManageTables.Location = new System.Drawing.Point(229, 496);
             this.lbManageTables.Name = "lbManageTables";
             this.lbManageTables.Size = new System.Drawing.Size(121, 16);
             this.lbManageTables.TabIndex = 555;
@@ -399,8 +413,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.cboAssociateType);
             this.groupBox2.Controls.Add(this.label33);
             this.groupBox2.Controls.Add(this.txtPrincipalName);
@@ -412,9 +424,9 @@
             this.groupBox2.Controls.Add(this.txtCCANo);
             this.groupBox2.Controls.Add(this.label31);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(399, 288);
+            this.groupBox2.Location = new System.Drawing.Point(399, 293);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(427, 127);
+            this.groupBox2.Size = new System.Drawing.Size(427, 131);
             this.groupBox2.TabIndex = 503;
             this.groupBox2.TabStop = false;
             // 
@@ -568,8 +580,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txtContactNos_Contact);
@@ -577,9 +587,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFullName_Contact);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(399, 216);
+            this.groupBox1.Location = new System.Drawing.Point(399, 213);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(427, 69);
+            this.groupBox1.Size = new System.Drawing.Size(427, 73);
             this.groupBox1.TabIndex = 502;
             this.groupBox1.TabStop = false;
             // 
@@ -661,9 +671,9 @@
             // 
             // GroupBox4
             // 
-            this.GroupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.GroupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.GroupBox4.Controls.Add(this.label41);
+            this.GroupBox4.Controls.Add(this.label32);
             this.GroupBox4.Controls.Add(this.txtBranchIssue);
             this.GroupBox4.Controls.Add(this.label10);
             this.GroupBox4.Controls.Add(this.lbSearchCIF);
@@ -705,9 +715,29 @@
             this.GroupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox4.Location = new System.Drawing.Point(6, 10);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(385, 470);
+            this.GroupBox4.Size = new System.Drawing.Size(385, 471);
             this.GroupBox4.TabIndex = 500;
             this.GroupBox4.TabStop = false;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label41.Location = new System.Drawing.Point(352, 107);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(18, 22);
+            this.label41.TabIndex = 569;
+            this.label41.Text = "* ";
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label32.Location = new System.Drawing.Point(352, 53);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(18, 22);
+            this.label32.TabIndex = 566;
+            this.label32.Text = "* ";
             // 
             // txtBranchIssue
             // 
@@ -783,9 +813,11 @@
             this.mtbMembershipDate.Name = "mtbMembershipDate";
             this.mtbMembershipDate.Size = new System.Drawing.Size(152, 26);
             this.mtbMembershipDate.TabIndex = 10;
+            this.mtbMembershipDate.Value = new System.DateTime(2022, 5, 4, 9, 38, 0, 0);
             // 
             // mtbDateOfBirth
             // 
+            this.mtbDateOfBirth.Checked = false;
             this.mtbDateOfBirth.CustomFormat = "dd/MM/yyyy";
             this.mtbDateOfBirth.Enabled = false;
             this.mtbDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -1150,7 +1182,7 @@
             this.GroupBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox3.Location = new System.Drawing.Point(399, 10);
             this.GroupBox3.Name = "GroupBox3";
-            this.GroupBox3.Size = new System.Drawing.Size(427, 200);
+            this.GroupBox3.Size = new System.Drawing.Size(427, 197);
             this.GroupBox3.TabIndex = 501;
             this.GroupBox3.TabStop = false;
             // 
@@ -1344,7 +1376,7 @@
             this.Controls.Add(this.pnlMain);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DataCapture";
-            this.Size = new System.Drawing.Size(881, 544);
+            this.Size = new System.Drawing.Size(881, 545);
             this.Load += new System.EventHandler(this.DataCapture_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
@@ -1467,5 +1499,8 @@
         private System.Windows.Forms.LinkLabel lbSearchRF;
         internal System.Windows.Forms.TextBox txtBranchIssue;
         internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label18;
+        internal System.Windows.Forms.Label label41;
+        internal System.Windows.Forms.Label label32;
     }
 }

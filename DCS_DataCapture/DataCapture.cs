@@ -279,95 +279,113 @@ namespace DCS_DataCapture
 
         public bool InsertToDbase(ref string ErrorMsg, string stationName = "", string photoPath = "", string zipPath = "")
         {
-            member member = new member();
-            member.cif = txtCIF.Text;
-            member.last_name = txtLName.Text;
-            member.first_name = txtFName.Text;
-            member.middle_name = txtMName.Text;
-            member.suffix = txtSuffix.Text;
-            member.gender = cboGender.Text;
-            member.date_birth = mtbDateOfBirth.Value.Date;
-            if (cboMaritalStatus.SelectedIndex > 0) member.civil_status_id = (int)cboMaritalStatus.SelectedValue;
-            if (cboMembershipStatus.SelectedIndex > 0) member.membership_status_id = (int)cboMembershipStatus.SelectedValue;
-            if (cboMembershipType.SelectedIndex > 0) member.membership_type_id = (int)cboMembershipType.SelectedValue;
-            if (cboPrintingType.SelectedIndex > 0) member.print_type_id = (int)cboPrintingType.SelectedValue;
-            if (cboReplaceReason.SelectedIndex > 0) member.recard_reason_id = (int)cboReplaceReason.SelectedValue;
-            member.membership_date = mtbMembershipDate.Value.Date;
-            member.contact_nos = txtContactNos.Text;
-            member.mobile_nos = txtMobileNos.Text;
-            member.emergency_contact_name = txtFullName_Contact.Text;
-            member.emergency_contact_nos = txtContactNos_Contact.Text;
-            if (cboAssociateType.SelectedIndex > 0) member.principal_associate_type_id = (int)cboAssociateType.SelectedValue;
-            member.principal_cif = txtCIF_PrincipalMember.Text;
-            member.principal_name = txtPrincipalName.Text;
-            member.cca_no = txtCCANo.Text;
-            member.user_id = msa.dcsUser.userId;
-            member.terminal_id = stationName;
-            member.branch_id = (int)cboBranchIssue.SelectedValue;
-            member.online_reference_number = txtReferenceNumber.Text;
-            member.card_name = txtCardName.Text;
-            member.email = email;
-
-            int memberId = 0;
-            int addressId = 0;
-
-            cancelCapture cancelCapture = new cancelCapture();
-
-            var responseMember = msa.addMember(member, ref memberId);
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
             bool response = false;
 
-            if (responseMember)
+            try
             {
-                if (memberId != 0)
+                member member = new member();
+                member.cif = txtCIF.Text;
+                member.last_name = txtLName.Text;
+                member.first_name = txtFName.Text;
+                member.middle_name = txtMName.Text;
+                member.suffix = txtSuffix.Text;
+                member.gender = cboGender.Text;
+                member.date_birth = mtbDateOfBirth.Value.Date;
+                if (cboMaritalStatus.SelectedIndex > 0) member.civil_status_id = (int)cboMaritalStatus.SelectedValue;
+                if (cboMembershipStatus.SelectedIndex > 0) member.membership_status_id = (int)cboMembershipStatus.SelectedValue;
+                if (cboMembershipType.SelectedIndex > 0) member.membership_type_id = (int)cboMembershipType.SelectedValue;
+                if (cboPrintingType.SelectedIndex > 0) member.print_type_id = (int)cboPrintingType.SelectedValue;
+                if (cboReplaceReason.SelectedIndex > 0) member.recard_reason_id = (int)cboReplaceReason.SelectedValue;
+                member.membership_date = mtbMembershipDate.Value.Date;
+                member.contact_nos = txtContactNos.Text;
+                member.mobile_nos = txtMobileNos.Text;
+                member.emergency_contact_name = txtFullName_Contact.Text;
+                member.emergency_contact_nos = txtContactNos_Contact.Text;
+                if (cboAssociateType.SelectedIndex > 0) member.principal_associate_type_id = (int)cboAssociateType.SelectedValue;
+                member.principal_cif = txtCIF_PrincipalMember.Text;
+                member.principal_name = txtPrincipalName.Text;
+                member.cca_no = txtCCANo.Text;
+                member.user_id = msa.dcsUser.userId;
+                member.terminal_id = stationName;
+                member.branch_id = (int)cboBranchIssue.SelectedValue;
+                member.online_reference_number = txtReferenceNumber.Text;
+                member.card_name = txtCardName.Text;
+                member.email = email;
+                sb.Append("Done mapping");
+
+                int memberId = 0;
+                int addressId = 0;
+
+                cancelCapture cancelCapture = new cancelCapture();
+
+                var responseMember = msa.addMember(member, ref memberId);
+                sb.Append(string.Concat("addMember memberId ", memberId.ToString(), " response ", responseMember.ToString()));
+
+                if (responseMember)
                 {
-                    cancelCapture.memberId = memberId;
-
-                    address address = new address();
-                    address.member_id = memberId;
-                    address.address1 = txtAddress1.Text;
-                    address.address2 = txtAddress2.Text;
-                    address.address3 = txtAddress3.Text;
-                    address.city = txtCity.Text;
-                    address.province = txtProvince.Text;
-                    address.country_id = (int)cboCountry.SelectedValue;
-                    address.zipcode = txtZipCode.Text;
-
-                    var responseAddress = msa.addAddress(address, ref addressId);
-
-                    if (responseAddress)
+                    if (memberId != 0)
                     {
-                        if (addressId != 0)
+                        cancelCapture.memberId = memberId;
+
+                        address address = new address();
+                        address.member_id = memberId;
+                        address.address1 = txtAddress1.Text;
+                        address.address2 = txtAddress2.Text;
+                        address.address3 = txtAddress3.Text;
+                        address.city = txtCity.Text;
+                        address.province = txtProvince.Text;
+                        address.country_id = (int)cboCountry.SelectedValue;
+                        address.zipcode = txtZipCode.Text;
+
+                        var responseAddress = msa.addAddress(address, ref addressId);
+                        sb.Append(string.Concat("addAddress addressId ", addressId.ToString(), " response ", responseAddress.ToString()));
+
+                        if (responseAddress)
                         {
-                            cancelCapture.addressId = addressId;
-
-                            memberImages memberImages = new memberImages();
-                            memberImages.cif = txtCIF.Text;
-                            memberImages.dateCaptured = DateTime.Now.ToString();
-                            if (System.IO.File.Exists(photoPath))
+                            if (addressId != 0)
                             {
-                                byte[] photo = System.IO.File.ReadAllBytes(photoPath);
-                                var base64Photo = System.Convert.ToBase64String(photo);
-                                memberImages.base64Photo = base64Photo;
-                            }
+                                cancelCapture.addressId = addressId;
 
-                            if (System.IO.File.Exists(zipPath))
-                            {
-                                byte[] zipFile = System.IO.File.ReadAllBytes(zipPath);
-                                var base64ZipFile = System.Convert.ToBase64String(zipFile);
-                                memberImages.base64ZipFile = base64ZipFile;
-                            }
+                                memberImages memberImages = new memberImages();
+                                memberImages.cif = txtCIF.Text;
+                                memberImages.dateCaptured = DateTime.Now.ToString();
+                                if (System.IO.File.Exists(photoPath))
+                                {
+                                    byte[] photo = System.IO.File.ReadAllBytes(photoPath);
+                                    var base64Photo = System.Convert.ToBase64String(photo);
+                                    memberImages.base64Photo = base64Photo;
+                                }
+                                else sb.Append(string.Concat("Photo not exist"));
 
-                            var responseMemberImages = msa.saveMemberImages(memberImages);
 
-                            if (responseMemberImages) response = true;
-                            else
-                            {
-                                var responseCancelCapture = msa.cancelCapture(cancelCapture);
+
+                                if (System.IO.File.Exists(zipPath))
+                                {
+                                    byte[] zipFile = System.IO.File.ReadAllBytes(zipPath);
+                                    var base64ZipFile = System.Convert.ToBase64String(zipFile);
+                                    memberImages.base64ZipFile = base64ZipFile;
+                                } else sb.Append(string.Concat("Zip not exist"));
+
+                                var responseMemberImages = msa.saveMemberImages(memberImages);
+                                sb.Append(string.Concat("saveMemberImages response ", responseMemberImages.ToString()));
+
+                                if (responseMemberImages) response = true;
+                                else
+                                {
+                                    var responseCancelCapture = msa.cancelCapture(cancelCapture);
+                                }
                             }
                         }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                sb.Append("Runtime error " + ex.Message);
+            }
+
+            ErrorMsg = sb.ToString();
 
             return response;
         }
@@ -857,7 +875,7 @@ namespace DCS_DataCapture
                 //cboPrintingType.Focus();
                 if (cboPrintingType.Items.Count > 0) { 
                     cboPrintingType.SelectedIndex = 1;
-                    cboPrintingType.Enabled = false;
+                    //cboPrintingType.Enabled = false;
                 }
 
                 if (cboMembershipStatus.Items.Count > 0) cboMembershipStatus.SelectedIndex = 0;
